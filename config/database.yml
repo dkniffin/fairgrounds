@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: fairgrounds_development
+
+test:
+  <<: *default
+  database: fairgrounds_test
+
+production:
+  <<: *default
+  database: fairgrounds_production
+  username: fairgrounds
+  password: <%= ENV['FAIRGROUNDS_DATABASE_PASSWORD'] %>
