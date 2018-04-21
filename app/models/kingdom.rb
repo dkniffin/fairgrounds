@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: cards
+# Table name: kingdoms
 #
 #  created_at :datetime         not null
 #  id         :integer          not null, primary key
@@ -8,5 +8,5 @@
 #  updated_at :datetime         not null
 #
 
-class Card < ApplicationRecord
+class Kingdom < ApplicationRecord
 end
