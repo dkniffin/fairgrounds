@@ -9,4 +9,6 @@
 #
 
 class Kingdom < ApplicationRecord
+  has_many :kingdom_memberships, dependent: :nullify
+  has_many :cards, through: :kingdom_memberships
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180421132816) do
+ActiveRecord::Schema.define(version: 20180421133105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,21 @@ ActiveRecord::Schema.define(version: 20180421132816) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "kingdom_memberships", force: :cascade do |t|
+    t.bigint "card_id"
+    t.bigint "kingdom_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["card_id"], name: "index_kingdom_memberships_on_card_id"
+    t.index ["kingdom_id"], name: "index_kingdom_memberships_on_kingdom_id"
+  end
+
   create_table "kingdoms", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "kingdom_memberships", "cards"
+  add_foreign_key "kingdom_memberships", "kingdoms"
 end
