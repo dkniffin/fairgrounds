@@ -1,0 +1,9 @@
+<h1>Kingdoms</h1>
+<% @kingdoms.each do |k| %>
+  <h2><%= k.name %></h2>
+  <ul>
+    <% k.cards.each do |c| %>
+      <li><%= c.name %></li>
+    <% end %>
+  </ul>
+<% end %>
