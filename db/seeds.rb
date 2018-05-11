@@ -11,7 +11,11 @@
 raw_json = File.read(File.join(File.dirname(__FILE__), "seeds/card_data.json"))
 card_data = JSON.parse(raw_json)
 kingdom_cards = card_data.reject do |card|
-  card["cardset_tags"].include?("base")
+  card["cardset_tags"].include?("base") ||
+    card["types"].include?("Event") ||
+    card["types"].include?("Landmark") ||
+    card["types"].include?("State") ||
+    card["types"].include?("Hex")
 end
 
 Card.destroy_all

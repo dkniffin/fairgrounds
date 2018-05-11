@@ -13,4 +13,8 @@ class Card < ApplicationRecord
   has_many :kingdoms, through: :kingdom_memberships
 
   validates :name, uniqueness: true
+
+  def image_path
+    "/card-images/#{name.tr(" ", "_")}.jpg"
+  end
 end
