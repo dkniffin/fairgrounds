@@ -3,16 +3,22 @@ class KingdomsController < ApplicationController
     @kingdoms = Kingdom.all
   end
 
+  def new
+    render :new, locals: { kingdom: Kingdom.new }
+  end
+
   def create
-    k = Kingdom.create(name: kingdom_params[:name])
-    kingdom_params[:card_names].each do |card_name|
-      k.cards << Card.find_by(name: card_name)
+    kingdom = Kingdom.new(kingdom_params)
+    if kingdom.save
+      redirect_to action: :index
+    else
+      render :new, locals: { kingdom: kingdom }
     end
   end
 
   private
 
   def kingdom_params
-    params.require(:kingdom).permit(:name, :card_names)
+    params.require(:kingdom).permit(:name)
   end
 end
