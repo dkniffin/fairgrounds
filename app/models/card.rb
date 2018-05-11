@@ -9,6 +9,8 @@
 #
 
 class Card < ApplicationRecord
-  has_many :kingdom_memberships, dependent: :nullify
+  has_many :kingdom_memberships, dependent: :destroy
   has_many :kingdoms, through: :kingdom_memberships
+
+  validates :name, uniqueness: true
 end
