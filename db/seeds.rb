@@ -15,7 +15,8 @@ kingdom_cards = card_data.reject do |card|
     card["types"].include?("Event") ||
     card["types"].include?("Landmark") ||
     card["types"].include?("State") ||
-    card["types"].include?("Hex")
+    card["types"].include?("Hex") ||
+    card["types"].include?("Boon")
 end
 
 Card.destroy_all

@@ -714,36 +714,6 @@
         "Victory"
     ]
 },{
-    "card_tag": "Grey Mustang",
-    "cardset_tags": [
-        "animals"
-    ],
-    "cost": "4",
-    "types": [
-        "Action",
-        "Victory"
-    ]
-},{
-    "card_tag": "Rabbits",
-    "cardset_tags": [
-        "animals"
-    ],
-    "cost": "3",
-    "types": [
-        "Action",
-        "Attack"
-    ]
-},{
-    "card_tag": "Yard Dog",
-    "cardset_tags": [
-        "animals"
-    ],
-    "cost": "2",
-    "types": [
-        "Action",
-        "Reaction"
-    ]
-},{
     "card_tag": "Potion",
     "cardset_tags": [
         "base",
@@ -1371,17 +1341,6 @@
     "types": [
         "Action",
         "Attack"
-    ]
-},{
-    "card_tag": "Ruins",
-    "cardset_tags": [
-        "dark ages"
-    ],
-    "cost": "0",
-    "count": "50",
-    "types": [
-        "Action",
-        "Ruins"
     ]
 },{
     "card_tag": "Sage",
@@ -3714,7 +3673,7 @@
         "Boon"
     ]
 },{
-    "card_tag": "The River's Gift.",
+    "card_tag": "The River's Gift",
     "cardset_tags": [
         "nocturne"
     ],
