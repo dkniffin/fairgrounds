@@ -15,6 +15,7 @@ gem "mailgun-ruby"
 # TODO: bump this to ~> 1.0.0, once this gets resolved: https://github.com/rails/rails/pull/31671
 gem "pg", "~> 0.21.0"
 gem "puma", "~> 3.7"
+gem "react_on_rails", "~> 11.0"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem "taperole", "~> 2.0"
