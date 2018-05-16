@@ -19,6 +19,7 @@ gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem "taperole", "~> 2.0"
 gem "uglifier", ">= 1.3.0"
+gem 'webpacker', "~> 3.4"
 
 group :development, :test do
   gem "annotate"
@@ -29,6 +30,7 @@ group :development, :test do
   gem "database_cleaner"
   gem "factory_bot_rails"
   gem "faker"
+  gem "foreman"
   gem "pry-byebug"
   gem "rails-erd"
   gem "rspec-rails"
