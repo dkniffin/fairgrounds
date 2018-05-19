@@ -1,14 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Autosuggest from 'react-autosuggest';
+import { cardType } from '../types';
 
 const propTypes = {
-  cards: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired
-    })
-  )
+  cards: PropTypes.arrayOf(cardType)
 };
 
 class CardPicker extends React.Component {
