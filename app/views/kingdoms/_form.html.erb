@@ -1,6 +1,6 @@
 <%= simple_form_for kingdom do |f| %>
   <%= f.input :name %><br />
-  <%= react_component("CardPicker", props: { cards: cards }) %>
+  <%= react_component("KingdomPicker", props: { cards: cards }) %>
 
   <%= f.submit %>
 <% end %>

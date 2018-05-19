@@ -1,14 +1,5 @@
 <h1>Kingdoms</h1>
 <% @kingdoms.each do |k| %>
   <h2><%= k.name %></h2>
-  <div>
-    <% k.cards.first(5).each do |c| %>
-      <img src="<%= c.image_path %>" />
-    <% end %>
-  </div>
-  <div>
-    <% k.cards.last(5).each do |c| %>
-      <%= react_component("Card", props: { cardData: c }) %>
-    <% end %>
-  </div>
+  <%= react_component("Kingdom", props: k.to_json) %>
 <% end %>

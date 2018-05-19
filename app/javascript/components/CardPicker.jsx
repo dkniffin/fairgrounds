@@ -5,7 +5,8 @@ import Card from './Card';
 import { cardType } from '../types';
 
 const propTypes = {
-  cards: PropTypes.arrayOf(cardType)
+  cards: PropTypes.arrayOf(cardType),
+  onPick: PropTypes.func
 };
 
 class CardPicker extends React.Component {
@@ -20,6 +21,7 @@ class CardPicker extends React.Component {
     this.onChange = this.onChange.bind(this);
     this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this);
     this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this);
+    this.onSuggestionSelected = this.onSuggestionSelected.bind(this);
   }
 
   onChange(event, { newValue }) {
@@ -47,6 +49,13 @@ class CardPicker extends React.Component {
     });
   }
 
+  onSuggestionSelected(_, { suggestion }) {
+    if (typeof this.props.onPick !== 'undefined') {
+      this.props.onPick(suggestion);
+      this.setState({ value: '' });
+    }
+  }
+
   render() {
     const { value, suggestions } = this.state;
 
@@ -61,6 +70,7 @@ class CardPicker extends React.Component {
         suggestions={suggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        onSuggestionSelected={this.onSuggestionSelected}
         getSuggestionValue={(card) => card.name}
         renderSuggestion={(cardData) => <Card cardData={cardData} />}
         inputProps={inputProps}
