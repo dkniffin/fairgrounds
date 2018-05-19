@@ -4,7 +4,10 @@ class KingdomsController < ApplicationController
   end
 
   def new
-    render :new, locals: { kingdom: Kingdom.new }
+    render :new, locals: {
+      cards: Card.all,
+      kingdom: Kingdom.new
+    }
   end
 
   def create

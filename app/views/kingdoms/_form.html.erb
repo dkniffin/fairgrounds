@@ -1,7 +1,6 @@
 <%= simple_form_for kingdom do |f| %>
   <%= f.input :name %><br />
-  <%# TODO: Move Card.all to controller %>
-  <%= react_component("CardPicker", props: { cards: Card.all }) %>
+  <%= react_component("CardPicker", props: { cards: cards }) %>
 
   <%= f.submit %>
 <% end %>

@@ -7,7 +7,7 @@ const propTypes = {
 
 function Card({ card }) {
   return (
-    <img src={card.image_path} />
+    <img src={card.imagePath} />
   );
 }
 
