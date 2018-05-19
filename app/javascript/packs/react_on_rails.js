@@ -1,3 +1,3 @@
-import HelloWorld from '../components/HelloWorld';
 import ReactOnRails from 'react-on-rails';
-ReactOnRails.register({ HelloWorld });
+import CardPicker from '../components/CardPicker';
+ReactOnRails.register({ CardPicker });
