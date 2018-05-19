@@ -28,10 +28,14 @@ class KingdomPicker extends React.Component {
   }
 
   render() {
+    const availableCards = this.props.cards.filter((card) => {
+      return this.state.cards.indexOf(card) === -1;
+    });
     return (
       <div>
+        <span>Add a card:</span>
         <CardPicker
-          cards={this.props.cards}
+          cards={availableCards}
           onPick={this.addCardToKingdom}
         />
         <Kingdom cards={this.state.cards} />

@@ -14,7 +14,6 @@ class CardPicker extends React.Component {
     super(props);
 
     this.state = {
-      cards: this.props.cards,
       suggestions: [],
       value: ''
     };
@@ -34,7 +33,7 @@ class CardPicker extends React.Component {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
 
-    const suggestions = (inputLength === 0) ? [] : this.state.cards.filter((card) => {
+    const suggestions = (inputLength === 0) ? [] : this.props.cards.filter((card) => {
       return card.name.toLowerCase().slice(0, inputLength) === inputValue;
     });
 
