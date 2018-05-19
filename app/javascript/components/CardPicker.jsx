@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
+import Card from './Card';
 import { cardType } from '../types';
 
 const propTypes = {
@@ -55,14 +56,13 @@ class CardPicker extends React.Component {
       onChange: this.onChange
     };
 
-    // Finally, render it!
     return (
       <Autosuggest
         suggestions={suggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         getSuggestionValue={(card) => card.name}
-        renderSuggestion={(card) => <div>{card.name}</div>}
+        renderSuggestion={(cardData) => <Card cardData={cardData} />}
         inputProps={inputProps}
       />
     );

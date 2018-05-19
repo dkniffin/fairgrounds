@@ -2,12 +2,12 @@ import React from 'react';
 import { cardType } from '../types';
 
 const propTypes = {
-  card: cardType
+  cardData: cardType
 };
 
-function Card({ card }) {
+function Card({ cardData }) {
   return (
-    <img src={card.imagePath} />
+    <img src={cardData.imagePath} />
   );
 }
 

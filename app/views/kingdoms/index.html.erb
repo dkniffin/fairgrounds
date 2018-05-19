@@ -8,7 +8,7 @@
   </div>
   <div>
     <% k.cards.last(5).each do |c| %>
-      <img src="<%= c.image_path %>" />
+      <%= react_component("Card", props: { cardData: c }) %>
     <% end %>
   </div>
 <% end %>
