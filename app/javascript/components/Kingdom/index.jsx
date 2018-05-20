@@ -1,21 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { cardType } from '../types';
-import Card from './Card';
+import { cardType } from 'types';
+import Card from 'components/Card';
+import './styles';
 
 const propTypes = {
   cards: PropTypes.arrayOf(cardType)
 };
 
-const CARD_WIDTH = 200;
-
 function Kingdom({ cards }) {
-  // TODO: Move this to CSS
-  const style = {
-    maxWidth: CARD_WIDTH * 5
-  };
   return (
-    <div style={style}>
+    <div className="c-kingdom">
       {cards.map((cardData) => {
         return (
           <Card

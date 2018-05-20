@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import CardPicker from './CardPicker';
-import Kingdom from './Kingdom';
-import { cardType } from '../types';
+import CardPicker from 'components/CardPicker';
+import Kingdom from 'components/Kingdom';
+import { cardType } from 'types';
 
 const propTypes = {
   cards: PropTypes.arrayOf(cardType)

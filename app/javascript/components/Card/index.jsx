@@ -1,5 +1,6 @@
 import React from 'react';
-import { cardType } from '../types';
+import { cardType } from 'types';
+import './styles';
 
 const propTypes = {
   cardData: cardType
@@ -7,7 +8,7 @@ const propTypes = {
 
 function Card({ cardData }) {
   return (
-    <img src={cardData.imagePath} />
+    <img className="c-card" src={cardData.imagePath} />
   );
 }
 
