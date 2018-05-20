@@ -15,13 +15,19 @@ class KingdomsController < ApplicationController
     if kingdom.save
       redirect_to action: :index
     else
-      render :new, locals: { kingdom: kingdom }
+      render :new, locals: {
+        cards: Card.all,
+        kingdom: kingdom
+      }
     end
   end
 
   private
 
   def kingdom_params
-    params.require(:kingdom).permit(:name)
+    params.require(:kingdom).permit(
+      :name,
+      card_ids: []
+    )
   end
 end

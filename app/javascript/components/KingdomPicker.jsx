@@ -5,9 +5,9 @@ import Kingdom from 'components/Kingdom';
 import { cardType } from 'types';
 
 const propTypes = {
-  cards: PropTypes.arrayOf(cardType)
+  cards: PropTypes.arrayOf(cardType),
+  name: PropTypes.string.isRequired
 };
-
 
 class KingdomPicker extends React.Component {
   constructor(props) {
@@ -38,6 +38,16 @@ class KingdomPicker extends React.Component {
           cards={availableCards}
           onPick={this.addCardToKingdom}
         />
+        {this.state.cards.map((card) => {
+          return (
+            <input
+              key={card.id}
+              type="hidden"
+              name={this.props.name}
+              value={card.id}
+            />
+          );
+        })}
         <Kingdom cards={this.state.cards} />
       </div>
     );
