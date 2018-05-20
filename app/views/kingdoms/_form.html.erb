@@ -4,10 +4,15 @@
     react_component("KingdomPicker",
       props: {
         cards: cards,
-        name: "kingdom[card_ids][]"
+        name: "kingdom[card_ids][]",
+        initialValue: kingdom.cards
       }
     )
   %>
 
-  <%= f.submit %>
+  <%= f.error :cards %>
+
+  <br />
+
+  <%= f.button :submit, data: { disable_with: "Creating New Kingdom..." } %>
 <% end %>

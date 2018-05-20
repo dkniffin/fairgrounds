@@ -6,7 +6,8 @@ import { cardType } from 'types';
 
 const propTypes = {
   cards: PropTypes.arrayOf(cardType),
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  initialValue: PropTypes.arrayOf(cardType)
 };
 
 class KingdomPicker extends React.Component {
@@ -14,7 +15,7 @@ class KingdomPicker extends React.Component {
     super(props);
 
     this.state = {
-      cards: []
+      cards: this.props.initialValue || []
     };
     this.addCardToKingdom = this.addCardToKingdom.bind(this);
   }
