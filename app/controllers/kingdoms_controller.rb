@@ -1,6 +1,6 @@
 class KingdomsController < ApplicationController
   def index
-    @kingdoms = Kingdom.all
+    @kingdoms = Kingdom.all.includes(:cards)
   end
 
   def new
