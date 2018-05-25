@@ -16,6 +16,10 @@ class Kingdom < ApplicationRecord
   validates :name, presence: true
   validate :validate_kindom_size
 
+  def rating
+    ratings.average(:value).to_i.ceil
+  end
+
   private
 
   def validate_kindom_size

@@ -46,20 +46,24 @@ function KingdomsTable({ kingdoms }) {
             const kingdomId = row.original.id;
 
             return (
-              <StarRatingComponent
-                name="rating"
-                starCount={5}
-                onStarClick={(value) => kingdomsService.rateKingdom(kingdomId, value)}
-              />
-              // <button onClick={() => kingdomsService.upvoteKingdom(kingdomId)}>Upvote</button>
+              <span>
+                <span>Average Rating: {row.original.rating}/5</span>
+                <br />
+                <span>Your rating: </span>
+                <StarRatingComponent
+                  name="rating"
+                  starCount={5}
+                  onStarClick={(value) => kingdomsService.rateKingdom(kingdomId, value)}
+                />
+              </span>
             );
           }
         }
       ]}
       resized={[
         { id: 'name', value: 250 },
-        { id: 'cards', value: 1000 },
-        { id: 'upvote', value: 10 }
+        { id: 'cards', value: 950 },
+        { id: 'upvote', value: 20 }
       ]}
       SubComponent={(row) => {
         return <Kingdom cards={row.original.cards} />;
