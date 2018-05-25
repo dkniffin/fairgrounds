@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTable from 'react-table';
+import StarRatingComponent from 'react-star-rating-component';
 
 import { kingdomType } from 'types';
 import Kingdom from 'components/Kingdom';
@@ -43,15 +44,21 @@ function KingdomsTable({ kingdoms }) {
           filterable: false,
           Cell: (row) => {
             const kingdomId = row.original.id;
+
             return (
-              <button onClick={() => kingdomsService.upvoteKingdom(kingdomId)}>Upvote</button>
+              <StarRatingComponent
+                name="rating"
+                starCount={5}
+                onStarClick={(value) => kingdomsService.rateKingdom(kingdomId, value)}
+              />
+              // <button onClick={() => kingdomsService.upvoteKingdom(kingdomId)}>Upvote</button>
             );
           }
         }
       ]}
       resized={[
         { id: 'name', value: 250 },
-        { id: 'cards', value: 1050 },
+        { id: 'cards', value: 1000 },
         { id: 'upvote', value: 10 }
       ]}
       SubComponent={(row) => {

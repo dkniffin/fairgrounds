@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :kingdoms, only: %i() do
         member do
-          post :upvote
+          post :rating
         end
       end
     end

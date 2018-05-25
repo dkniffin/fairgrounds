@@ -1,3 +1,5 @@
 class Api::V1::KingdomsController < ApplicationController
-  include KingdomsActions
+  def rating
+    render json: {}
+  end
 end

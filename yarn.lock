@@ -5414,6 +5414,13 @@ react-on-rails@11.0.7:
   version "11.0.7"
   resolved "https://registry.yarnpkg.com/react-on-rails/-/react-on-rails-11.0.7.tgz#6a938d4928f594f65aac1cb386b6142f44c313bf"
 
+react-star-rating-component@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-star-rating-component/-/react-star-rating-component-1.4.1.tgz#74dc1c73493f088013331c234190b8cccad31f6b"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
 react-table@^6.8.6:
   version "6.8.6"
   resolved "https://registry.yarnpkg.com/react-table/-/react-table-6.8.6.tgz#a0ad8b4839319052d5befc012603fb161e52ede3"

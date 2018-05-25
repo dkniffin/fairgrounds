@@ -1,6 +1,4 @@
 class KingdomsController < ApplicationController
-  include KingdomsActions
-
   def index
     render :index, locals: {
       kingdoms: Kingdom.all.includes(:cards)
