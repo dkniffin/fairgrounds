@@ -11,6 +11,7 @@
 class Kingdom < ApplicationRecord
   has_many :kingdom_memberships, dependent: :destroy
   has_many :cards, through: :kingdom_memberships
+  has_many :ratings, dependent: :destroy
 
   validates :name, presence: true
   validate :validate_kindom_size
