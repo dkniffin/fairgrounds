@@ -2,7 +2,4 @@
 
 <%= button_to "New Kingdom", new_kingdom_path, method: :get %>
 
-<% @kingdoms.each do |k| %>
-  <h2><%= k.name %></h2>
-  <%= react_component("Kingdom", props: k.to_json) %>
-<% end %>
+<%= react_component("KingdomsTable", props: { kingdoms: kingdoms }) %>

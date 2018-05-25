@@ -6,6 +6,13 @@ const cardType = PropTypes.shape({
   imagePath: PropTypes.string
 });
 
+const kingdomType = PropTypes.shape({
+  id: PropTypes.id,
+  name: PropTypes.string,
+  cards: PropTypes.arrayOf(cardType)
+});
+
 export {
-  cardType
+  cardType,
+  kingdomType
 };

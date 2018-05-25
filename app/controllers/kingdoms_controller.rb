@@ -1,6 +1,8 @@
 class KingdomsController < ApplicationController
   def index
-    @kingdoms = Kingdom.all.includes(:cards)
+    render :index, locals: {
+      kingdoms: Kingdom.all.includes(:cards)
+    }
   end
 
   def new
