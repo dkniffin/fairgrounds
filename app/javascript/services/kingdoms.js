@@ -1,8 +1,11 @@
 import apiService from './api';
 
 const kingdomsService = {
-  rateKingdom(kingdomId, rating) {
-    return apiService.post(`/kingdoms/${kingdomId}/rating`, { rating });
+  rateKingdom(kingdomId, value) {
+    return apiService.post(
+      `/kingdoms/${kingdomId}/rating`,
+      { kingdom: { kingdom_id: kingdomId, value } }
+    );
   }
 };
 
