@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { kingdomType } from 'types';
 import ReactTable from 'react-table';
-import "react-table/react-table.css";
+import { kingdomType } from 'types';
+import Kingdom from 'components/Kingdom';
+import 'react-table/react-table.css';
 
 const propTypes = {
   kingdoms: PropTypes.arrayOf(kingdomType)
@@ -34,11 +35,16 @@ function KingdomsTable({ kingdoms }) {
           //   });
           // }
         }
+        // { Header: 'Upvote', filterable: false }
       ]}
       resized={[
         { id: 'name', value: 250 },
-        { id: 'cards', value: 'auto' }
+        { id: 'cards', value: 1050 },
+        { id: 'upvote', value: 10 }
       ]}
+      SubComponent={(row) => {
+        return <Kingdom cards={row.original.cards} />;
+      }}
     />
   );
 }
