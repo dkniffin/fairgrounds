@@ -34,8 +34,19 @@ function KingdomsTable({ kingdoms }) {
           //     return cardNames.some((card) => card.includes(queriedCard));
           //   });
           // }
+        },
+        {
+          Header: 'Upvote',
+          filterable: false,
+          Cell: (row) => {
+            const kingdomId = row.original.id;
+            return (
+              <form action={`/kingdoms/${kingdomId}/upvote`} method="post">
+                <button>Upvote</button>
+              </form>
+            );
+          }
         }
-        // { Header: 'Upvote', filterable: false }
       ]}
       resized={[
         { id: 'name', value: 250 },

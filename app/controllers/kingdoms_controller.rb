@@ -24,6 +24,12 @@ class KingdomsController < ApplicationController
     end
   end
 
+  def upvote
+    render :index, locals: {
+      kingdoms: Kingdom.all.includes(:cards)
+    }
+  end
+
   private
 
   def kingdom_params
