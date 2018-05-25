@@ -1,4 +1,6 @@
 class KingdomsController < ApplicationController
+  include KingdomsActions
+
   def index
     render :index, locals: {
       kingdoms: Kingdom.all.includes(:cards)
@@ -22,12 +24,6 @@ class KingdomsController < ApplicationController
         kingdom: kingdom
       }
     end
-  end
-
-  def upvote
-    render :index, locals: {
-      kingdoms: Kingdom.all.includes(:cards)
-    }
   end
 
   private

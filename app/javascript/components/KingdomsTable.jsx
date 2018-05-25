@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTable from 'react-table';
+
 import { kingdomType } from 'types';
 import Kingdom from 'components/Kingdom';
+import kingdomsService from 'services/kingdoms';
+
 import 'react-table/react-table.css';
 
 const propTypes = {
@@ -41,9 +44,7 @@ function KingdomsTable({ kingdoms }) {
           Cell: (row) => {
             const kingdomId = row.original.id;
             return (
-              <form action={`/kingdoms/${kingdomId}/upvote`} method="post">
-                <button>Upvote</button>
-              </form>
+              <button onClick={() => kingdomsService.upvoteKingdom(kingdomId)}>Upvote</button>
             );
           }
         }
