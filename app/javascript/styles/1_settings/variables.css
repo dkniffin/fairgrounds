@@ -1,0 +1,41 @@
+:root {
+  /* Base colors */
+  --color-white: #fff;
+  --color-off-white: #eee;
+  --color-light-gray: #999;
+  --color-medium-gray: #555;
+  --color-dark-gray: #333;
+  --color-black: #000;
+  --color-blue: #33F;
+  --color-red: #F33;
+
+  /* App colors */
+  --color-link: var(--color-blue);
+
+  /* Font */
+  --font-family-default: 'Cinzel', serif;
+
+  /* Font size */
+  --font-size-default: var(--font-size-sm);
+  --font-size-xs: 0.625rem;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 0.875rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.375rem;
+  --font-size-xxl: 1.875rem;
+
+  /* Font weight */
+  --font-size-default: var(--font-weight-medium);
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 6rem;
+}

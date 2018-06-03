@@ -1,0 +1,12 @@
+.l-header {
+  --height: var(--spacing-lg);
+
+  background-color: var(--color-dark-gray);
+  color: var(--color-white);
+  height: var(--height);
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: var(--height);
+  padding-left: var(--spacing-md);
+  font-size: var(--font-size-xl);
+}

@@ -62,7 +62,7 @@ function KingdomsTable({ kingdoms }) {
       ]}
       resized={[
         { id: 'name', value: 250 },
-        { id: 'cards', value: 950 },
+        { id: 'cards', value: 900 },
         { id: 'upvote', value: 20 }
       ]}
       SubComponent={(row) => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { cardType } from 'types';
-import './styles';
 
 const propTypes = {
   cardData: cardType

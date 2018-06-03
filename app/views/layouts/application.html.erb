@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Fairgrounds</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -11,6 +12,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'header' %>
+
+    <div class='l-container'>
+      <%= yield %>
+    </div>
   </body>
 </html>

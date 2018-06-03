@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { cardType } from 'types';
 import Card from 'components/Card';
-import './styles';
 
 const propTypes = {
   cards: PropTypes.arrayOf(cardType)
