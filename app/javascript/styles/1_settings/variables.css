@@ -2,12 +2,16 @@
   /* Base colors */
   --color-white: #fff;
   --color-off-white: #eee;
-  --color-light-gray: #999;
+  --color-light-gray: #bbb;
   --color-medium-gray: #555;
   --color-dark-gray: #333;
   --color-black: #000;
-  --color-blue: #33F;
+  --color-blue: #87afc8;
   --color-red: #F33;
+  --color-green: #87C86E;
+  --color-yellow: #fac855;
+  --color-orange: #dc8c46;
+  --color-purple: #aa6eaa;
 
   /* App colors */
   --color-link: var(--color-blue);

@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  background-color: var(--color-light-gray);
   color: var(--color-black);
   font-family: var(--font-family-default);
   font-size: var(--font-size-default);
