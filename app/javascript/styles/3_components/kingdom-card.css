@@ -1,0 +1,49 @@
+/* TODO: Move this */
+.c-kingdom-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.c-kingdom-card {
+  border: 1px solid black;
+  display: inline-block;
+  margin: var(--spacing-sm);
+  border-radius: 5px;
+
+  & .c-kingdom-card__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: var(--spacing-sm);
+    background-color: var(--color-dark-gray);
+    color: var(--color-off-white);
+    border-top-radius: 5px;
+
+    & .c-kingdom-card__title {
+      font-weight: var(--font-weight-bold);
+      padding: var(--spacing-sm);
+    }
+
+    & .c-kingdom-card__rating {
+      display: inline-block;
+      margin-right: var(--spacing-sm);
+    }
+    & .c-kingdom-card__play-count {
+      display: inline-block;
+    }
+  }
+
+  & .c-kingdom-card__label {
+    font-size: var(--font-size-xs);
+  }
+
+  & .c-kingdom-card__cards {
+    padding: var(--spacing-sm);
+    max-width: 536px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--color-medium-gray);
+  }
+}
