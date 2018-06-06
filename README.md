@@ -1,6 +1,7 @@
 # Fairgrounds
 
-*TODO: Project description*
+Fairgrounds is an app for sharing and voting on sets of cards (aka "Kingdoms") for the card game
+[Dominion](https://boardgamegeek.com/boardgame/36218/dominion).
 
 ## Table of Contents
 
@@ -12,9 +13,9 @@
 
 ## Stack
 
-Rails - ~> 5.1.4
-Ruby - 2.4.2
-PostgreSQL
+- Rails - ~> 5.1.4
+- Ruby - 2.4.2
+- PostgreSQL
 
 ## Getting Started
 
@@ -24,8 +25,8 @@ If you haven't installed ruby, bundler, and postgresql, do that first. Then, do 
 set up this app:
 
 ```sh
-git clone <REPO_URL>
-cd <APP_DIR>
+git clone git@github.com:dkniffin/fairgrounds.git
+cd fairgrounds
 bundle install
 cp config/secrets.example.yml config/secrets.yml
 bundle exec rails db:setup
@@ -40,8 +41,3 @@ bundle exec foreman start
 ```
 
 Then navigate to http://localhost:3000
-
-### Seeded logins
-
-For a list of credentials you can use to log into the app, check [the seeds file](db/seeds.rb).
-These logins are created via `rails db:setup` above.
