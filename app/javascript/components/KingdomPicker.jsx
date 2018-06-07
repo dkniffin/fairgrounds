@@ -49,7 +49,9 @@ class KingdomPicker extends React.Component {
             />
           );
         })}
-        <Kingdom cards={this.state.cards} />
+        <Kingdom
+          kingdom={{ cards: this.state.cards }}
+        />
       </div>
     );
   }

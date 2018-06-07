@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import { kingdomType } from 'types';
-import KingdomCard from 'components/KingdomCard';
+import Kingdom from 'components/Kingdom';
 
 const propTypes = {
   kingdoms: PropTypes.arrayOf(kingdomType)
@@ -12,7 +12,7 @@ function KingdomsList({ kingdoms }) {
   return (
     <div className="c-kingdom-list">
       {kingdoms.map((kingdom) => {
-        return <KingdomCard key={kingdom.id} kingdom={kingdom} />;
+        return <Kingdom key={kingdom.id} kingdom={kingdom} />;
       })}
     </div>
   );
