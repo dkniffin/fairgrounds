@@ -10,16 +10,13 @@ ruby "2.4.2"
 gem "rails", "~> 5.1.4"
 
 gem "active_model_serializers", "~> 0.10.0"
-gem "coffee-rails", "~> 4.2"
 gem "mailgun-ruby"
 # TODO: bump this to ~> 1.0.0, once this gets resolved: https://github.com/rails/rails/pull/31671
 gem "pg", "~> 0.21.0"
 gem "puma", "~> 3.7"
 gem "react_on_rails", "~> 11.0"
-gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem "taperole", "~> 2.0"
-gem "uglifier", ">= 1.3.0"
 gem "webpacker", "~> 3.4"
 
 group :development, :test do
