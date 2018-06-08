@@ -5,6 +5,8 @@ import classnames from 'classnames';
 import { kingdomType } from 'types';
 import Card from 'components/Card';
 
+import Routes from 'routes';
+
 const propTypes = {
   kingdom: kingdomType,
   small: PropTypes.bool
@@ -26,7 +28,7 @@ function Kingdom({ kingdom, small }) {
   return (
     <div className={kingdomClasses}>
       <div className="c-kingdom__header">
-        <span className="c-kingdom__title">{titleString}</span>
+        <a className="c-kingdom__title" href={Routes.kingdomPath(kingdom.id)}>{titleString}</a>
 
         <div className="c-kingdom__rating">
           <div className="c-kingdom__label">Avg Rating</div>

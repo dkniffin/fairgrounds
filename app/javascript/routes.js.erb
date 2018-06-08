@@ -1,0 +1,8 @@
+/* rails-erb-loader-dependencies ../config/routes */
+var routes = {};
+
+(function() {
+    <%= JsRoutes.generate(namespace: "Namespace", camel_case: true) %>
+}.call(routes));
+
+export default routes.Namespace;
