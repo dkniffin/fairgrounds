@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "kingdoms#index"
 
-  resources :kingdoms, only: %i(index new create) do
+  resources :kingdoms, only: %i(index new create show) do
     member do
       post :upvote
     end

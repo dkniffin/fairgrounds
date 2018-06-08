@@ -1,13 +1,16 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+import classnames from 'classnames';
 
 import { kingdomType } from 'types';
 import Card from 'components/Card';
 
 const propTypes = {
-  kingdom: kingdomType
+  kingdom: kingdomType,
+  small: PropTypes.bool
 };
 
-function Kingdom({ kingdom }) {
+function Kingdom({ kingdom, small }) {
   // TODO: Display the rating as stars instead of asterisks
   const ratingString = kingdom.rating ?
     (new Array(kingdom.rating + 1)).join('* ').trim() :
@@ -15,8 +18,13 @@ function Kingdom({ kingdom }) {
   const titleString = kingdom.name || 'New Kingdom';
   const playCountString = kingdom.playCount || 0;
 
+  const kingdomClasses = classnames({
+    'c-kingdom': true,
+    'c-kingdom--small': small
+  });
+
   return (
-    <div className="c-kingdom">
+    <div className={kingdomClasses}>
       <div className="c-kingdom__header">
         <span className="c-kingdom__title">{titleString}</span>
 
@@ -36,7 +44,7 @@ function Kingdom({ kingdom }) {
             <Card
               key={cardData.id}
               cardData={cardData}
-              small
+              small={small}
             />
           );
         })}

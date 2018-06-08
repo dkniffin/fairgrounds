@@ -12,7 +12,7 @@ function KingdomsList({ kingdoms }) {
   return (
     <div className="c-kingdom-list">
       {kingdoms.map((kingdom) => {
-        return <Kingdom key={kingdom.id} kingdom={kingdom} />;
+        return <Kingdom key={kingdom.id} kingdom={kingdom} small />;
       })}
     </div>
   );

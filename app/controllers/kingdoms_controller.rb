@@ -24,6 +24,12 @@ class KingdomsController < ApplicationController
     end
   end
 
+  def show
+    render :show, locals: {
+      kingdom: Kingdom.find(params[:id])
+    }
+  end
+
   private
 
   def kingdom_params
