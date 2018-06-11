@@ -11,13 +11,13 @@
 class Kingdom < ApplicationRecord
   has_many :kingdom_memberships, dependent: :destroy
   has_many :cards, through: :kingdom_memberships
-  has_many :ratings, dependent: :destroy
+  has_many :plays, dependent: :destroy
 
   validates :name, presence: true
   validate :validate_kindom_size
 
   def rating
-    ratings.average(:value).to_i.ceil
+    plays.average(:rating).to_i.ceil
   end
 
   private
