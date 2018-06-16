@@ -11,6 +11,7 @@
     "axios": "^0.18.0",
     "babel-preset-react": "^6.24.1",
     "classnames": "^2.2.5",
+    "font-awesome": "^4.7.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "rails-erb-loader": "^5.4.2",
