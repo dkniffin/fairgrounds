@@ -8,14 +8,4 @@ Rails.application.routes.draw do
   end
   resources :cards, only: %i(index)
   resources :plays, only: %i(new create)
-
-  namespace :api do
-    namespace :v1 do
-      resources :kingdoms, only: %i() do
-        member do
-          post :rating
-        end
-      end
-    end
-  end
 end
