@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
   resources :cards, only: %i(index)
   resources :plays, only: %i(new create)
+
+  get :credits, to: "application#credits"
 end

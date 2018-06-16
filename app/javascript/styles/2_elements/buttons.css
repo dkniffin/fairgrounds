@@ -10,5 +10,5 @@ button {
 }
 
 .c-btn--main {
-  background-color: var(--color-orange);
+  background-color: var(--color-button);
 }

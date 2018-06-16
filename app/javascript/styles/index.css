@@ -21,8 +21,10 @@
 /* When in doubt, it goes here */
 
 /* 4_layout (.l-[name] BEM class selectors) header, footer, grid, sections */
+@import "4_layout/body";
 @import "4_layout/container";
 @import "4_layout/header";
+@import "4_layout/footer";
 
 /* 5_helpers (.h-[name] class selectors) display, headings, typography */
 @import "5_helpers/display";

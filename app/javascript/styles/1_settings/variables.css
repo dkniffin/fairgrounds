@@ -6,7 +6,8 @@
   --color-medium-gray: #555;
   --color-dark-gray: #333;
   --color-black: #000;
-  --color-blue: #87afc8;
+  --color-dark-blue: #497999;
+  --color-light-blue: #87afc8;
   --color-red: #F33;
   --color-green: #87C86E;
   --color-yellow: #fac855;
@@ -14,7 +15,8 @@
   --color-purple: #aa6eaa;
 
   /* App colors */
-  --color-link: var(--color-blue);
+  --color-link: var(--color-dark-blue);
+  --color-button: var(--color-light-blue);
 
   /* Font */
   --font-family-default: 'Cinzel', serif;
@@ -42,4 +44,8 @@
   --spacing-lg: 3rem;
   --spacing-xl: 4rem;
   --spacing-xxl: 6rem;
+
+  /* App Spacing */
+  --header-height: var(--spacing-lg);
+  --footer-height: var(--spacing-xxl);
 }
