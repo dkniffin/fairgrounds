@@ -1,3 +1,6 @@
 <div class="l-container l-container--centered">
   <%= react_component("Kingdom", props: { kingdom: kingdom }) %>
+
+  <%= render "plays/form", play: Play.new(kingdom: kingdom) %>
 </div>
+

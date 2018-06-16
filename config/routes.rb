@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     end
   end
   resources :cards, only: %i(index)
+  resources :plays, only: %i(new create)
 
   namespace :api do
     namespace :v1 do
