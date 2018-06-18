@@ -46,7 +46,6 @@ function Kingdom({ kingdom, small }) {
             <Card
               key={cardData.id}
               cardData={cardData}
-              small={small}
             />
           );
         })}

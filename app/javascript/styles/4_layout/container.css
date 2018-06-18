@@ -1,5 +1,13 @@
 .l-container {
-  padding: var(--spacing-md);
+  padding: var(--spacing-xs);
+
+  @media screen and (min-width: 450px) {
+    padding: var(--spacing-sm);
+  }
+
+  @media screen and (min-width: 1000px) {
+    padding: var(--spacing-md);
+  }
 }
 
 .l-container--centered {

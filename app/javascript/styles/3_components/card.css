@@ -1,12 +1,30 @@
 .c-card {
-  border: 7px solid black;
+  padding: 1% 1%;
   background-color: black;
-  border-radius: 10px;
-  margin: 2px;
-}
+  border-radius: 5%;
+  margin: 0.5%;
+  max-width: 50%;
 
-.c-card--small {
-  width: 100px;
-  border: 3.5px solid black;
-  border-radius: 5px;
+  /* 3 cards per row */
+  @media screen and (min-width: 339px) {
+    max-width: 32%;
+  }
+
+  /* 4 cards per row */
+  @media screen and (min-width: 459px) {
+    max-width: 24%;
+  }
+
+  /* 5 cards per row */
+  @media screen and (min-width: 1000px) {
+    max-width: none;
+  }
+
+  & img {
+    /* Keep aspect ratio */
+    display: block;
+    width: 100%;
+    min-width: 90px;
+    height: auto;
+  }
 }

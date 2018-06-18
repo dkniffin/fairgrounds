@@ -1,21 +1,15 @@
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { cardType } from 'types';
 
 const propTypes = {
-  cardData: cardType,
-  small: PropTypes.bool
+  cardData: cardType
 };
 
-function Card({ cardData, small }) {
-  const classes = classNames({
-    'c-card': true,
-    'c-card--small': small
-  });
-
+function Card({ cardData }) {
   return (
-    <img className={classes} src={cardData.imagePath} />
+    <div className="c-card">
+      <img src={cardData.imagePath} />
+    </div>
   );
 }
 

@@ -1,7 +1,4 @@
 .c-kingdom {
-  --card-section-width: 1108px;
-
-  min-width: var(--card-section-width);
   border: 1px solid black;
   display: inline-block;
   margin: var(--spacing-sm);
@@ -35,14 +32,15 @@
   }
 
   & .c-kingdom__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: var(--spacing-sm);
-    max-width: var(--card-section-width);
-    margin-right: auto;
-    margin-left: auto;
     background-color: var(--color-medium-gray);
-  }
-}
 
-.c-kingdom--small {
-  --card-section-width: 536px;
+    & .c-card {
+      flex: 1 0 19%;
+    }
+  }
 }

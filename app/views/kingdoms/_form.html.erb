@@ -1,5 +1,6 @@
 <%= simple_form_for kingdom do |f| %>
   <%= f.input :name %><br />
+  <%# TODO: Convert this react_component to use as: :react_component %>
   <%=
     react_component("KingdomPicker",
       props: {
