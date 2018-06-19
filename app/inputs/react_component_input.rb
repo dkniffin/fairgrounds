@@ -1,5 +1,5 @@
 class ReactComponentInput < SimpleForm::Inputs::Base
-  def input
+  def input(_wrapper_options)
     component = input_options[:component]
     given_props = input_options[:props]
     value = object.send(attribute_name)

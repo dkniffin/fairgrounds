@@ -1,6 +1,5 @@
 .l-kingdom-show {
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
 
   & .l-kingdom-show__kingdom {

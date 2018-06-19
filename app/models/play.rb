@@ -5,7 +5,7 @@
 #  created_at        :datetime         not null
 #  id                :integer          not null, primary key
 #  kingdom_id        :integer
-#  number_of_players :string
+#  number_of_players :integer
 #  rating            :integer
 #  updated_at        :datetime         not null
 #

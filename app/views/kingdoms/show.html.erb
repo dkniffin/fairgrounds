@@ -1,7 +1,7 @@
 <h1><%= kingdom.name %></h1>
 <p>Average Rating: <%= kingdom.rating %></p>
 <%# TODO %>
-<p>Number of games played: TBD
+<p>Number of games played: <%= kingdom.plays.count %>
 
 <div class="l-container l-container--centered l-kingdom-show">
 
@@ -10,7 +10,7 @@
   </div>
 
   <div class="l-kingdom-show__rating-form">
-    <%= render "plays/form", play: Play.new(kingdom: kingdom) %>
+    <%= render "plays/form", play: play %>
   </div>
 </div>
 

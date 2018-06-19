@@ -25,8 +25,10 @@ class KingdomsController < ApplicationController
   end
 
   def show
+    kingdom = Kingdom.find(params[:id])
     render :show, locals: {
-      kingdom: Kingdom.find(params[:id])
+      kingdom: kingdom,
+      play: Play.new(kingdom: kingdom)
     }
   end
 
