@@ -5,7 +5,7 @@
   margin-top: auto;
   margin-bottom: auto;
   line-height: var(--header-height);
-  padding-left: var(--spacing-md);
+  padding-left: var(--spacing-sm);
   font-size: var(--font-size-xl);
 
   & .l-header__link {
