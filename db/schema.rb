@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20180611124650) do
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "number_of_players"
+    t.integer "number_of_players"
     t.index ["kingdom_id"], name: "index_plays_on_kingdom_id"
   end
 

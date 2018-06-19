@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :card do
-    name { Faker::Lorem.word }
+    sequence(:name) { |i| "#{Faker::Lorem.word} #{i}" }
   end
 end

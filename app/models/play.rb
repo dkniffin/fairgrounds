@@ -13,6 +13,6 @@
 class Play < ApplicationRecord
   belongs_to :kingdom
 
-  validates :rating, inclusion: { in: 1..5 }
-  validates :number_of_players, inclusion: { in: 2..6 }
+  validates :rating, presence: true, inclusion: { in: 1..5 }
+  validates :number_of_players, presence: true, inclusion: { in: 2..6 }
 end
