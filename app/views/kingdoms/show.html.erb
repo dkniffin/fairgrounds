@@ -1,6 +1,16 @@
-<div class="l-container l-container--centered">
-  <%= react_component("Kingdom", props: { kingdom: kingdom }) %>
+<h1><%= kingdom.name %></h1>
+<p>Average Rating: <%= kingdom.rating %></p>
+<%# TODO %>
+<p>Number of games played: TBD
 
-  <%= render "plays/form", play: Play.new(kingdom: kingdom) %>
+<div class="l-container l-container--centered l-kingdom-show">
+
+  <div class="l-kingdom-show__kingdom">
+    <%= react_component("Kingdom", props: { kingdom: kingdom, show_header: false }) %>
+  </div>
+
+  <div class="l-kingdom-show__rating-form">
+    <%= render "plays/form", play: Play.new(kingdom: kingdom) %>
+  </div>
 </div>
 

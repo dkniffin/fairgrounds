@@ -1,3 +1,4 @@
+<h2>Log a play:</h2>
 <%= simple_form_for play do |f| %>
   <%= f.association :kingdom, as: :hidden %>
   <%= f.input :number_of_players, as: :react_component, component: "RatingInput", props: { icon: 'user' } %>

@@ -1,0 +1,16 @@
+.l-kingdom-show {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+
+  & .l-kingdom-show__kingdom {
+    flex: 1 0 80%;
+  }
+
+  & .l-kingdom-show__rating-form {
+    min-width: 120px;
+    margin: var(--spacing-md);
+
+    flex: 0 1 10%;
+  }
+}
