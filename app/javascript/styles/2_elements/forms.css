@@ -7,9 +7,7 @@ fieldset {
 input[type="text"],
 textarea,
 select {
-  /* border: 1px solid var(--color-black); */
-  /* border-style: inset; */
-  box-shadow: inset 0 0 1px rgba(0,0,0,.14);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.14);
   background-color: #ccc !important;
 }
 

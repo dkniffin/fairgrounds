@@ -9,7 +9,6 @@
   & .l-kingdom-show__rating-form {
     min-width: 120px;
     margin: var(--spacing-md);
-
     flex: 0 1 10%;
   }
 }

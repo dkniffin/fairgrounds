@@ -8,8 +8,8 @@
   --color-black: #000;
   --color-dark-blue: #497999;
   --color-light-blue: #87afc8;
-  --color-red: #F33;
-  --color-green: #87C86E;
+  --color-red: #dc4646;
+  --color-green: #87c86e;
   --color-yellow: #fac855;
   --color-orange: #dc8c46;
   --color-purple: #aa6eaa;
@@ -19,7 +19,7 @@
   --color-button: var(--color-light-blue);
 
   /* Font */
-  --font-family-default: 'Cinzel', serif;
+  --font-family-default: "Cinzel", serif;
 
   /* Font size */
   --font-size-default: var(--font-size-sm);
