@@ -24,7 +24,7 @@ function Kingdom({ kingdom, showHeader }) {
   const playCountString = kingdom.playCount || 0;
 
   return (
-    <div className='c-kingdom'>
+    <div className="c-kingdom">
       {showHeader &&
         <div className="c-kingdom__header">
           <a className="c-kingdom__title" href={Routes.kingdomPath(kingdom.id)}>{titleString}</a>
