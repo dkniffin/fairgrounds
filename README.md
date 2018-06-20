@@ -1,5 +1,7 @@
 # Fairgrounds
 
+[![Build Status](https://travis-ci.org/dkniffin/fairgrounds.svg?branch=master)](https://travis-ci.org/dkniffin/fairgrounds)
+
 Fairgrounds is an app for sharing and voting on sets of cards (aka "Kingdoms") for the card game
 [Dominion](https://boardgamegeek.com/boardgame/36218/dominion).
 
