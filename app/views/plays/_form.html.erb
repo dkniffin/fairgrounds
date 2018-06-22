@@ -1,7 +1,7 @@
 <h2>Log a play:</h2>
 <%= simple_form_for play do |f| %>
   <%= f.association :kingdom, as: :hidden %>
-  <%= f.input :number_of_players, as: :react_component, component: "RatingInput", props: { icon: 'user' } %>
+  <%= f.input :number_of_players, as: :react_component, component: "RatingInput", props: { icon: 'user', starCount: 6 } %>
   <%= f.input :rating, as: :react_component, component: "RatingInput" %>
 
   <%= f.button :submit, data: { disable_with: "Logging Play..." }, class: 'c-btn--main' %>

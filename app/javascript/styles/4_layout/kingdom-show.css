@@ -3,12 +3,12 @@
   flex-wrap: wrap;
 
   & .l-kingdom-show__kingdom {
-    flex: 1 0 80%;
+    flex: 1 0 75%;
   }
 
   & .l-kingdom-show__rating-form {
     min-width: 120px;
     margin: var(--spacing-sm);
-    flex: 0 1 10%;
+    flex: 0 1 15%;
   }
 }

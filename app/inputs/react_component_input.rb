@@ -5,7 +5,7 @@ class ReactComponentInput < SimpleForm::Inputs::Base
     value = object.send(attribute_name)
     props = {
       name: input_name,
-      value: value
+      initialValue: value
     }.merge(given_props || {})
 
     template.react_component(component, props: props)
