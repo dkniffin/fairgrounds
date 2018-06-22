@@ -35,7 +35,6 @@ function Kingdom({ kingdom, showHeader }) {
           </div>
           <div className="c-kingdom__play-count">
             <div className="c-kingdom__label">Play Count</div>
-            {/* TODO: Save play count on the backend, and display that here */}
             <span>{playCountString}</span>
           </div>
         </div>
