@@ -3,7 +3,7 @@ module.exports = {
   "rules": {
     "at-rule-blacklist": null,
     "at-rule-empty-line-before": ["always", {
-      "except": ["blockless-group", "first-nested"],
+      "except": ["blockless-after-blockless", "first-nested"],
       "ignore": ["after-comment"]
     }],
     "at-rule-name-case": "lower",
@@ -78,14 +78,13 @@ module.exports = {
     "length-zero-no-unit": true,
     "max-empty-lines": 1,
     "max-line-length": null,
-    "max-nesting-depth": [ 4, {
-      "ignore": ["at-rules-without-declaration-blocks"]
+    "max-nesting-depth": [4, {
+      "ignore": ["blockless-at-rules"]
     }],
     "media-feature-colon-space-after": "always",
     "media-feature-colon-space-before": "never",
     "media-feature-name-case": "lower",
     "media-feature-name-no-vendor-prefix": true,
-    "media-feature-no-missing-punctuation": true,
     "media-feature-parentheses-space-inside": "never",
     "media-feature-range-operator-space-after": "always",
     "media-feature-range-operator-space-before": "always",
@@ -115,12 +114,12 @@ module.exports = {
     }],
     "property-no-vendor-prefix": true,
     "property-whitelist": null,
-    "rule-nested-empty-line-before": ["always-multi-line", {
+    "rule-empty-line-before": ["always-multi-line", {
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     }],
     "root-no-standard-properties": null,
-    "rule-non-nested-empty-line-before": ["always-multi-line", {
+    "rule-empty-line-before": ["always-multi-line", {
       "ignore": ["after-comment"]
     }],
     "selector-attribute-brackets-space-inside": "never",
@@ -147,7 +146,7 @@ module.exports = {
     }],
     "selector-no-attribute": null,
     "selector-no-combinator": null,
-    "selector-no-id": true,
+    "selector-max-id": [0],
     "selector-no-type": null,
     "selector-no-universal": null,
     "selector-no-vendor-prefix": true,
@@ -160,12 +159,11 @@ module.exports = {
     "selector-pseudo-element-no-unknown": [true, {
       "ignorePseudoElements": ["ms-expand"]
     }],
-    "selector-root-no-composition": true,
     "selector-type-case": "lower",
     "selector-type-no-unknown": null,
     "string-no-newline": true,
     "string-quotes": "double",
-    "time-no-imperceptible": true,
+    "time-min-milliseconds": 100,
     "unit-blacklist": null,
     "unit-whitelist": null,
     "value-list-comma-newline-after": "always-multi-line",
