@@ -40,14 +40,19 @@ function Kingdom({ kingdom, showHeader }) {
         </div>
       }
       <div className="c-kingdom__cards">
-        {kingdom.cards.map((cardData) => {
-          return (
-            <Card
-              key={cardData.id}
-              cardData={cardData}
-            />
-          );
-        })}
+        {kingdom.cards.length > 0 &&
+          kingdom.cards.map((cardData) => {
+            return (
+              <Card
+                key={cardData.id}
+                cardData={cardData}
+              />
+            );
+          })
+        }
+        {kingdom.cards.length === 0 &&
+          <span>Empty Kingdom</span>
+        }
       </div>
     </div>
   );

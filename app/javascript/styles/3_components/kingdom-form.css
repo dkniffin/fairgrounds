@@ -1,0 +1,15 @@
+.c-kingdom-form {
+  display: flex;
+
+  & .c-kingdom-form__form {
+    flex: 2;
+  }
+
+  & .c-kingdom {
+    flex: 3;
+
+    & .c-card {
+      max-width: 20%;
+    }
+  }
+}

@@ -65,15 +65,25 @@ class CardPicker extends React.Component {
     };
 
     return (
-      <Autosuggest
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        onSuggestionSelected={this.onSuggestionSelected}
-        getSuggestionValue={(card) => card.name}
-        renderSuggestion={(cardData) => <Card cardData={cardData} />}
-        inputProps={inputProps}
-      />
+      <div className="c-card-picker">
+        <Autosuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+          onSuggestionSelected={this.onSuggestionSelected}
+          getSuggestionValue={(card) => card.name}
+          // renderSuggestion={(cardData) => <p>{cardData.name}</p>}
+          renderSuggestion={(cardData) => {
+            return (
+              <React.Fragment>
+                <Card cardData={cardData} />
+                <span>{cardData.name}</span>
+              </React.Fragment>
+            );
+          }}
+          inputProps={inputProps}
+        />
+      </div>
     );
   }
 }

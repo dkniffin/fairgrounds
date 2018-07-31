@@ -1,0 +1,40 @@
+.c-card-picker {
+
+  & .react-autosuggest__container {
+    display: inline-block;
+    position: relative;
+  }
+
+  & .react-autosuggest__suggestions-list {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    max-height: 250px;
+    overflow: scroll;
+    background: var(--color-off-white);
+    border: 1px solid var(--color-dark-gray);
+  }
+
+  & .react-autosuggest__suggestion {
+    width: 100%;
+    list-style-type: none;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-light-gray);
+    display: flex;
+    max-width: 210px;
+  }
+
+  & .c-card {
+    width: 50px;
+    padding: 2px;
+    display: inline-block;
+    line-height: 100%;
+    vertical-align: middle;
+    margin-right: var(--spacing-sm);
+
+    & img {
+      min-width: 40px;
+    }
+  }
+}

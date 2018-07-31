@@ -1,19 +1,8 @@
-<%= simple_form_for kingdom do |f| %>
-  <%= f.input :name %><br />
-  <%# TODO: Convert this react_component to use as: :react_component %>
-  <%=
-    react_component("KingdomPicker",
-      props: {
-        cards: cards,
-        name: "kingdom[card_ids][]",
-        initialValue: kingdom.cards
-      }
-    )
-  %>
-
-  <%= f.error :cards %>
-
-  <br />
-
-  <%= f.button :submit, data: { disable_with: "Creating New Kingdom..." }, class: 'c-btn--main' %>
-<% end %>
+<%=
+  react_component("KingdomForm",
+    props: {
+      cards: cards,
+      kingdom: kingdom
+    }
+  )
+%>
