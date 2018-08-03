@@ -22,7 +22,7 @@
   --font-family-default: "Cinzel", serif;
 
   /* Font size */
-  --font-size-default: var(--font-size-sm);
+  --font-size-default: var(--font-size-lg);
   --font-size-xs: 0.625rem;
   --font-size-sm: 0.75rem;
   --font-size-md: 0.875rem;
@@ -31,13 +31,14 @@
   --font-size-xxl: 1.875rem;
 
   /* Font weight */
-  --font-size-default: var(--font-weight-medium);
+  --font-weight-default: var(--font-weight-medium);
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
   /* Spacing */
+  --spacing-default: var(--spacing-md);
   --spacing-xxs: 0.25rem;
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -49,4 +50,9 @@
   /* App Spacing */
   --header-height: var(--spacing-lg);
   --footer-height: var(--spacing-xxl);
+
+  /* Transitions */
+  --transition-default: all var(--transition-duration-default) var(--transition-timing-default);
+  --transition-duration-default: 0.2s;
+  --transition-timing-default: ease-in-out;
 }

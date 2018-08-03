@@ -7,19 +7,22 @@
   & .c-kingdom__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid var(--color-black);
     padding: var(--spacing-xs);
     background-color: var(--color-dark-gray);
     color: var(--color-off-white);
+    vertical-align: middle;
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
 
     & .c-kingdom__title {
       font-weight: var(--font-weight-bold);
-      padding: var(--spacing-xs);
+      font-size: var(--font-size-xl);
     }
 
     & .c-kingdom__rating {
       display: inline-block;
-      margin-right: var(--spacing-xs);
     }
 
     & .c-kingdom__play-count {

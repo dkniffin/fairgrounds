@@ -3,6 +3,10 @@
 
   & .c-kingdom-form__form {
     flex: 2;
+
+    & label {
+      display: block;
+    }
   }
 
   & .c-kingdom {

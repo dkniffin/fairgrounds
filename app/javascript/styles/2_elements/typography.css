@@ -62,7 +62,7 @@ p {
 }
 
 small {
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
 }
 
 strong {
