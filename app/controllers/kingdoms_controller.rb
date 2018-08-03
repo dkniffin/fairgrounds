@@ -15,7 +15,7 @@ class KingdomsController < ApplicationController
   def create
     kingdom = Kingdom.new(kingdom_params)
     if kingdom.save
-      redirect_to action: :index
+      redirect_to kingdom_path(kingdom), notice: "Your kingdom was created successfully"
     else
       render :new, locals: {
         cards: Card.all,

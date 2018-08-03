@@ -5,9 +5,11 @@ import Kingdom from 'components/Kingdom';
 import { cardType, kingdomType } from 'types';
 
 const propTypes = {
+  authenticityToken: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(cardType),
-  name: PropTypes.string,
-  kingdom: kingdomType
+  kingdom: kingdomType,
+  submitEndpoint: PropTypes.string.isRequired,
+  submitVerb: PropTypes.string.isRequired
 };
 
 class KingdomForm extends React.Component {
@@ -33,10 +35,16 @@ class KingdomForm extends React.Component {
       return this.state.cards.indexOf(card) === -1;
     });
     return (
-      <form className="c-kingdom-form">
+      <form
+        className="c-kingdom-form"
+        action={this.props.submitEndpoint}
+        method={this.props.submitVerb}
+      >
+        <input type="hidden" name="authenticity_token" value={this.props.authenticityToken} />
+
         <div className="c-kingdom-form__form">
           <label htmlFor="name">Name</label>
-          <input type="text" name="name" />
+          <input type="text" name="kingdom[name]" />
 
           <br />
 
@@ -50,11 +58,13 @@ class KingdomForm extends React.Component {
               <input
                 key={card.id}
                 type="hidden"
-                name={this.props.name}
+                name="kingdom[card_ids][]"
                 value={card.id}
               />
             );
           })}
+
+          <button>Submit</button>
         </div>
         <Kingdom
           showHeader={false}
