@@ -18,6 +18,7 @@
 @import "3_components/card";
 @import "3_components/card-picker";
 @import "3_components/flash";
+@import "3_components/input-error";
 @import "3_components/kingdom";
 @import "3_components/kingdom-form";
 @import "3_components/kingdom-list";

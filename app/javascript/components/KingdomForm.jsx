@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import CardPicker from 'components/CardPicker';
 import Kingdom from 'components/Kingdom';
+import { Text } from 'components/Inputs';
+
 import { cardType, kingdomType } from 'types';
 
 const propTypes = {
@@ -43,8 +46,12 @@ class KingdomForm extends React.Component {
         <input type="hidden" name="authenticity_token" value={this.props.authenticityToken} />
 
         <div className="c-kingdom-form__form">
-          <label htmlFor="name">Name</label>
-          <input type="text" name="kingdom[name]" />
+          <Text
+            label="Name"
+            input={{ name: 'kingdom[name]' }}
+            error={this.props.kingdom.errors.name}
+            required="true"
+          />
 
           <br />
 
