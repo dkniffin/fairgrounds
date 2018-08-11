@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Kingdom from 'components/Kingdom';
-import { Text, CardSetPicker } from 'components/Inputs';
+import { Text, CardPicker } from 'components/Inputs';
 
 import { cardType, kingdomType } from 'types';
 
@@ -18,23 +18,47 @@ class KingdomForm extends React.Component {
   constructor(props) {
     super(props);
 
+    const selectedCards = props.kingdom.cards || [];
+
+    const availableCards = selectedCards.reduce((acc, selectedCard) => {
+      return this.filterOut(acc, selectedCard);
+    }, props.cards);
+
     this.state = {
-      cards: props.kingdom.cards || []
+      cards: selectedCards || [],
+      availableCards
     };
+
+    this.filterOut = this.filterOut.bind(this);
     this.addCardToKingdom = this.addCardToKingdom.bind(this);
+    this.removeCardFromKingdom = this.removeCardFromKingdom.bind(this);
+  }
+
+  filterOut(cards, cardToRemove) {
+    return cards.filter((c) => c.id !== cardToRemove.id);
+  }
+
+  removeCardFromKingdom(card) {
+    const cards = this.filterOut(this.state.cards, card);
+    const availableCards = this.state.availableCards.concat([card]);
+
+    this.setState({
+      cards,
+      availableCards
+    });
   }
 
   addCardToKingdom(card) {
     const prevCards = this.state.cards;
-    console.log(card)
+    const availableCards = this.filterOut(this.state.availableCards, card);
 
     this.setState({
-      cards: [...prevCards, card]
+      cards: [...prevCards, card],
+      availableCards
     });
   }
 
   render() {
-    console.log(this.props.kingdom);
     return (
       <form
         className="c-kingdom-form"
@@ -54,19 +78,28 @@ class KingdomForm extends React.Component {
 
           <br />
 
-          <CardSetPicker
-            cards={this.props.cards}
-            onAddCard={this.addCardToKingdom}
-            input={{ name: 'kingdom[card_ids][]' }}
-            initialValue={this.state.cards}
+          <CardPicker
+            cards={this.state.availableCards}
+            onPick={this.addCardToKingdom}
             errors={this.props.kingdom.errors.cards}
           />
+          {this.state.cards.map((card) => {
+            return (
+              <input
+                key={card.id}
+                type="hidden"
+                name="kingdom[card_ids][]"
+                value={card.id}
+              />
+            );
+          })}
 
           <button>Submit</button>
         </div>
         <Kingdom
           showHeader={false}
           kingdom={{ cards: this.state.cards }}
+          onCardClose={this.removeCardFromKingdom}
         />
       </form>
     );

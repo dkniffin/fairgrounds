@@ -8,7 +8,11 @@ import { cardType } from 'types';
 const propTypes = {
   cards: PropTypes.arrayOf(cardType),
   onPick: PropTypes.func,
-  className: PropTypes.string
+  errors: PropTypes.arrayOf(PropTypes.string)
+};
+
+const defaultProps = {
+  errors: []
 };
 
 class CardPicker extends React.Component {
@@ -59,24 +63,31 @@ class CardPicker extends React.Component {
 
   render() {
     const { value, suggestions } = this.state;
+    const errorsPresent = this.props.errors.length > 0;
+    const className = classNames(
+      'c-input',
+      'c-card-picker',
+      {
+        'c-input--error': errorsPresent
+      }
+    );
 
     const inputProps = {
       placeholder: 'Type a card name',
       value,
-      onChange: this.onChange
+      onChange: this.onChange,
+      className: 'c-input__input'
     };
-
-    const className = classNames('c-card-picker', this.props.className);
 
     return (
       <div className={className}>
+        <label className="c-card-picker__label">Add a card</label>
         <Autosuggest
           suggestions={suggestions}
           onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
           onSuggestionsClearRequested={this.onSuggestionsClearRequested}
           onSuggestionSelected={this.onSuggestionSelected}
           getSuggestionValue={(card) => card.name}
-          // renderSuggestion={(cardData) => <p>{cardData.name}</p>}
           renderSuggestion={(cardData) => {
             return (
               <React.Fragment>
@@ -87,11 +98,17 @@ class CardPicker extends React.Component {
           }}
           inputProps={inputProps}
         />
+        {errorsPresent &&
+          <span className="c-input__error-text">
+            {this.props.errors}
+          </span>
+        }
       </div>
     );
   }
 }
 
 CardPicker.propTypes = propTypes;
+CardPicker.defaultProps = defaultProps;
 
 export default CardPicker;

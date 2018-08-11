@@ -8,14 +8,15 @@ import Routes from 'routes';
 
 const propTypes = {
   kingdom: kingdomType,
-  showHeader: PropTypes.bool
+  showHeader: PropTypes.bool,
+  onCardClose: PropTypes.func
 };
 
 const defaultProps = {
   showHeader: true
 };
 
-function Kingdom({ kingdom, showHeader }) {
+function Kingdom({ kingdom, showHeader, onCardClose }) {
   // TODO: Display the rating as stars instead of asterisks
   const ratingString = kingdom.rating ?
     (new Array(kingdom.rating + 1)).join('* ').trim() :
@@ -46,6 +47,7 @@ function Kingdom({ kingdom, showHeader }) {
               <Card
                 key={cardData.id}
                 cardData={cardData}
+                onClose={onCardClose}
               />
             );
           })

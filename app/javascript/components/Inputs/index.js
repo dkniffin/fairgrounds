@@ -4,7 +4,7 @@ import Select from './Select';
 import Checkbox from './Checkbox';
 import Radio from './Radio';
 
-import CardSetPicker from './CardSetPicker';
+import CardPicker from './CardPicker';
 
 export {
   Text,
@@ -13,5 +13,5 @@ export {
   Checkbox,
   Radio,
 
-  CardSetPicker
+  CardPicker
 };
