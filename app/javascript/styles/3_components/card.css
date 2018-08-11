@@ -4,6 +4,7 @@
   border-radius: 5%;
   margin: 0.5%;
   max-width: 50%;
+  position: relative;
 
   /* 3 cards per row */
   @media screen and (min-width: 339px) {
@@ -26,5 +27,19 @@
     width: 100%;
     min-width: 90px;
     height: auto;
+  }
+
+  & .c-card__x-button {
+    color: var(--color-red);
+    font-size: var(--font-size-xxl);
+    line-height: var(--font-size-sm);
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    padding: 2px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--spacing-xxs);
+    background-color: var(--color-dark-gray);
   }
 }
