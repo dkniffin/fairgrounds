@@ -17,9 +17,8 @@ const defaultProps = {
 };
 
 function Kingdom({ kingdom, showHeader, onCardClose }) {
-  // TODO: Display the rating as stars instead of asterisks
   const ratingString = kingdom.rating ?
-    (new Array(kingdom.rating + 1)).join('* ').trim() :
+    (new Array(kingdom.rating + 1)).join('★ ').trim() :
     'TBD';
   const titleString = kingdom.name || 'New Kingdom';
   const playCountString = kingdom.playCount || 0;
