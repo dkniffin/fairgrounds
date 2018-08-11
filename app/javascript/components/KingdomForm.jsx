@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CardPicker from 'components/CardPicker';
 import Kingdom from 'components/Kingdom';
-import { Text } from 'components/Inputs';
+import { Text, CardSetPicker } from 'components/Inputs';
 
 import { cardType, kingdomType } from 'types';
 
@@ -20,13 +19,14 @@ class KingdomForm extends React.Component {
     super(props);
 
     this.state = {
-      cards: [] // this.kingdom.cards ||
+      cards: props.kingdom.cards || []
     };
     this.addCardToKingdom = this.addCardToKingdom.bind(this);
   }
 
   addCardToKingdom(card) {
     const prevCards = this.state.cards;
+    console.log(card)
 
     this.setState({
       cards: [...prevCards, card]
@@ -34,9 +34,7 @@ class KingdomForm extends React.Component {
   }
 
   render() {
-    const availableCards = this.props.cards.filter((card) => {
-      return this.state.cards.indexOf(card) === -1;
-    });
+    console.log(this.props.kingdom);
     return (
       <form
         className="c-kingdom-form"
@@ -49,27 +47,20 @@ class KingdomForm extends React.Component {
           <Text
             label="Name"
             input={{ name: 'kingdom[name]' }}
-            error={this.props.kingdom.errors.name}
-            required="true"
+            errors={this.props.kingdom.errors.name}
+            initialValue={this.props.kingdom.name}
+            required
           />
 
           <br />
 
-          <label className="c-card-picker__label">Add a card</label>
-          <CardPicker
-            cards={availableCards}
-            onPick={this.addCardToKingdom}
+          <CardSetPicker
+            cards={this.props.cards}
+            onAddCard={this.addCardToKingdom}
+            input={{ name: 'kingdom[card_ids][]' }}
+            initialValue={this.state.cards}
+            errors={this.props.kingdom.errors.cards}
           />
-          {this.state.cards.map((card) => {
-            return (
-              <input
-                key={card.id}
-                type="hidden"
-                name="kingdom[card_ids][]"
-                value={card.id}
-              />
-            );
-          })}
 
           <button>Submit</button>
         </div>

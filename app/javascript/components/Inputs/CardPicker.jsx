@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import classNames from 'classnames';
 import Autosuggest from 'react-autosuggest';
 import Card from 'components/Card';
 import { cardType } from 'types';
 
 const propTypes = {
   cards: PropTypes.arrayOf(cardType),
-  onPick: PropTypes.func
+  onPick: PropTypes.func,
+  className: PropTypes.string
 };
 
 class CardPicker extends React.Component {
@@ -64,8 +66,10 @@ class CardPicker extends React.Component {
       onChange: this.onChange
     };
 
+    const className = classNames('c-card-picker', this.props.className);
+
     return (
-      <div className="c-card-picker">
+      <div className={className}>
         <Autosuggest
           suggestions={suggestions}
           onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}

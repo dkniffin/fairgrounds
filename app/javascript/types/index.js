@@ -12,7 +12,12 @@ const kingdomType = PropTypes.shape({
   cards: PropTypes.arrayOf(cardType)
 });
 
+const inputType = PropTypes.shape({
+  name: PropTypes.string.isRequired
+});
+
 export {
   cardType,
-  kingdomType
+  kingdomType,
+  inputType
 };

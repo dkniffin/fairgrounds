@@ -2,23 +2,28 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
+import { inputType } from 'types';
+
 const propTypes = {
-  input: PropTypes.object,
+  input: inputType,
   label: PropTypes.string,
-  error: PropTypes.error,
+  errors: PropTypes.arrayOf(PropTypes.string),
   required: PropTypes.bool
 };
 
 const defaultProps = {
-  required: false
+  required: false,
+  errors: []
 };
 
-function Text({ input, label, error, required }) {
+function Text({ input, label, errors, required }) {
+  // TODO: Abstract this to a component that can be used for all/most inputs
+  const errorsPresent = errors.length > 0;
   const classes = classNames(
     'c-input',
     'c-input--text',
     {
-      'c-input--error': !!error
+      'c-input--error': errorsPresent
     }
   );
 
@@ -38,9 +43,9 @@ function Text({ input, label, error, required }) {
         className="c-input__input"
       />
 
-      {error &&
+      {errorsPresent &&
         <span className="c-input__error-text">
-          {error}
+          {errors}
         </span>
       }
     </div>
