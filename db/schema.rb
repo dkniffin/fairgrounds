@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180611124650) do
+ActiveRecord::Schema.define(version: 20180811172030) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,32 @@ ActiveRecord::Schema.define(version: 20180611124650) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "event"
+    t.boolean "action"
+    t.boolean "duration"
+    t.boolean "attack"
+    t.boolean "reaction"
+    t.boolean "treasure"
+    t.boolean "reserve"
+    t.boolean "traveller"
+    t.boolean "victory"
+    t.boolean "curse"
+    t.boolean "trash"
+    t.boolean "prize"
+    t.boolean "looter"
+    t.boolean "shelter"
+    t.boolean "landmark"
+    t.boolean "castle"
+    t.boolean "gathering"
+    t.boolean "hex"
+    t.boolean "fate"
+    t.boolean "night"
+    t.boolean "heirloom"
+    t.boolean "doom"
+    t.boolean "state"
+    t.boolean "spirit"
+    t.boolean "boon"
+    t.boolean "zombie"
   end
 
   create_table "kingdom_memberships", force: :cascade do |t|

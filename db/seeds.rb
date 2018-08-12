@@ -19,7 +19,36 @@ kingdom_cards = card_data.reject do |card|
 end
 
 kingdom_cards.each do |card|
-  Card.create(name: card["card_tag"])
+  Card.create(
+    name: card["card_tag"],
+    event: card["types"].include?("Event"),
+    action: card["types"].include?("Action"),
+    duration: card["types"].include?("Duration"),
+    attack: card["types"].include?("Attack"),
+    reaction: card["types"].include?("Reaction"),
+    treasure: card["types"].include?("Treasure"),
+    reserve: card["types"].include?("Reserve"),
+    traveller: card["types"].include?("Traveller"),
+    victory: card["types"].include?("Victory"),
+    curse: card["types"].include?("Curse"),
+    trash: card["types"].include?("Trash"),
+    prize: card["types"].include?("Prize"),
+    looter: card["types"].include?("Looter"),
+    shelter: card["types"].include?("Shelter"),
+    landmark: card["types"].include?("Landmark"),
+    castle: card["types"].include?("Castle"),
+    gathering: card["types"].include?("Gathering"),
+    hex: card["types"].include?("Hex"),
+    fate: card["types"].include?("Fate"),
+    night: card["types"].include?("Night"),
+    heirloom: card["types"].include?("Heirloom"),
+    doom: card["types"].include?("Doom"),
+    state: card["types"].include?("State"),
+    spirit: card["types"].include?("Spirit"),
+    boon: card["types"].include?("Boon"),
+    zombie: card["types"].include?("Zombie"),
+    non_kingdom: non_kingdom?(card["name"])
+  )
 end
 
 ################## KINGDOMS ##################
