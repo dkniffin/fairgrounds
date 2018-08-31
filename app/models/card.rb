@@ -26,6 +26,7 @@
 #  shelter    :boolean
 #  spirit     :boolean
 #  state      :boolean
+#  supply     :boolean
 #  trash      :boolean
 #  traveller  :boolean
 #  treasure   :boolean
@@ -39,6 +40,8 @@ class Card < ApplicationRecord
   has_many :kingdoms, through: :kingdom_memberships
 
   validates :name, uniqueness: true
+
+  scope :supply_cards, -> { where(supply: true) }
 
   def image_path
     "/card-images/#{name.tr(" ", "_")}.jpg"

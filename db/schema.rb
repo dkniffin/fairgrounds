@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180811172030) do
+ActiveRecord::Schema.define(version: 20180812015240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20180811172030) do
     t.boolean "spirit"
     t.boolean "boon"
     t.boolean "zombie"
+    t.boolean "supply"
   end
 
   create_table "kingdom_memberships", force: :cascade do |t|

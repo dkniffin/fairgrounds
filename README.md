@@ -34,6 +34,11 @@ cp config/secrets.example.yml config/secrets.yml
 bundle exec rails db:setup
 ```
 
+### Importing Cards
+
+To import the data about all of Dominion's cards, run `bundle exec rake import:cards`.
+**Note: This step is automatically run when running `db:seed` or `db:setup`**
+
 ### Usage
 
 To run the app locally:
