@@ -17,3 +17,8 @@ kingdoms_data.each do |kingdom_data|
   end
   kingdom.save
 end
+
+################## MATERIALS ##################
+Material.destroy_all
+
+Rake::Task["import:materials"].invoke

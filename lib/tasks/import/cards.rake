@@ -1,6 +1,6 @@
 namespace :import do
-  task :cards do
-    raw_json = File.read(File.join(File.dirname(__FILE__), "../../data/card_data.json"))
+  task cards: :environment do
+    raw_json = File.read(File.join(File.dirname(__FILE__), "../../../data/card_data.json"))
     card_data = JSON.parse(raw_json)
 
     def supply?(card_data)
@@ -11,8 +11,8 @@ namespace :import do
                       !%w(Page Peasant).include?(card_data["card_tag"])
 
       specific_cards = [
-        'Copper', 'Silver', 'Gold', 'Platinum', 'Potion', 'Estate', 'Duchy', 'Province', 'Colony',
-        'Curse', 'Bag of Gold', 'Bat', 'Champion', 'Teacher', 'Madman', 'Mercenary', 'Spoils'
+        "Copper", "Silver", "Gold", "Platinum", "Potion", "Estate", "Duchy", "Province", "Colony",
+        "Curse", "Bag of Gold", "Bat", "Champion", "Teacher", "Madman", "Mercenary", "Spoils"
       ]
       return false if specific_cards.include?(card_data["card_tag"])
 
