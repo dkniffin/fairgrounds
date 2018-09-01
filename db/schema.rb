@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180831190043) do
+ActiveRecord::Schema.define(version: 20180901151523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "card_dependencies", force: :cascade do |t|
+    t.bigint "card_id"
+    t.string "dependency_type"
+    t.bigint "dependency_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["card_id"], name: "index_card_dependencies_on_card_id"
+    t.index ["dependency_type", "dependency_id"], name: "index_card_dependencies_on_dependency_type_and_dependency_id"
+  end
 
   create_table "cards", force: :cascade do |t|
     t.string "name"
@@ -46,6 +56,9 @@ ActiveRecord::Schema.define(version: 20180831190043) do
     t.boolean "boon"
     t.boolean "zombie"
     t.boolean "supply"
+    t.integer "cost"
+    t.boolean "special_cost"
+    t.integer "potion_cost"
   end
 
   create_table "kingdom_memberships", force: :cascade do |t|
@@ -81,6 +94,7 @@ ActiveRecord::Schema.define(version: 20180831190043) do
     t.index ["kingdom_id"], name: "index_plays_on_kingdom_id"
   end
 
+  add_foreign_key "card_dependencies", "cards"
   add_foreign_key "kingdom_memberships", "cards"
   add_foreign_key "kingdom_memberships", "kingdoms"
   add_foreign_key "plays", "kingdoms"

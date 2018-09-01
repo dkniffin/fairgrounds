@@ -21,6 +21,10 @@ namespace :import do
     end
 
     card_data.each do |card|
+      match = card["cost"].match(/(\d+)(\*)?/)
+      # & because some cards only have a potion cost
+      cost, asterisk = match&.captures
+
       Card.create(
         name: card["card_tag"],
         event: card["types"].include?("Event"),
@@ -49,7 +53,10 @@ namespace :import do
         spirit: card["types"].include?("Spirit"),
         boon: card["types"].include?("Boon"),
         zombie: card["types"].include?("Zombie"),
-        supply: supply?(card)
+        supply: supply?(card),
+        cost: cost.to_i,
+        special_cost: asterisk.present?,
+        potion_cost: card["potcost"].to_i
       )
     end
   end

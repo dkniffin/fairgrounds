@@ -22,3 +22,4 @@ end
 Material.destroy_all
 
 Rake::Task["import:materials"].invoke
+Rake::Task["import:card_dependencies"].invoke
