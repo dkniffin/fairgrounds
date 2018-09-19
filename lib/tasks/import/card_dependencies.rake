@@ -26,6 +26,7 @@ namespace :import do
     wish = Card.find_by(name: "Wish")
 
     dependencies = [
+      # TODO: Bane
       { card_name: "Young Witch", dependency: curse },
       { card_name: "Bridge Troll", dependency: minus_1_coin_tokens },
       # { card_name: "Type: Reserve", dependency: nil }, # TODO: Tavern Mat
@@ -44,12 +45,12 @@ namespace :import do
       { card_name: "Replace", dependency: curse },
       { card_name: "Mountebank", dependency: curse },
       { card_name: "Sea Hag", dependency: curse },
-      # { card_name: "Cards that cost potion", dependency: nil }, # TODO: Potion
       { card_name: "Tournament", dependency: curse },
       # { card_name: "Tournament", dependency: nil }, # TODO: Prizes
       { card_name: "Bandit Camp", dependency: spoils },
       { card_name: "Marauder", dependency: spoils },
       { card_name: "Pillage", dependency: spoils },
+      # TODO: Cultist, death cart -> Ruins
       # { card_name: "Cards of type Looter", dependency: nil }, # TODO: Ruins
       { card_name: "Hermit", dependency: Card.find_by(name: "Madman") },
       { card_name: "Urchin", dependency: Card.find_by(name: "Mercenary") },
@@ -84,7 +85,7 @@ namespace :import do
       { card_name: "Werewolf", dependency: hexes },
       { card_name: "Skulk", dependency: hexes },
       { card_name: "Devil's Workshop", dependency: imp },
-      { card_name: "Exorcist", dependency: imp },
+      # { card_name: "Exorcist", dependency: spirits }, # TODO: Spirits
       { card_name: "Idol", dependency: curse },
       { card_name: "Idol", dependency: boons },
       { card_name: "Leprechaun", dependency: wish },
@@ -111,6 +112,7 @@ namespace :import do
       { card_name: "Vampire", dependency: Card.find_by(name: "Bat") },
       # { card_name: "Sauna/Avanto", dependency: nil }, # TODO: Each other
       # { card_name: "Black Market", dependency: nil }, # TODO: Black market deck
+      { card_name: "Trade Route", dependency: coin_tokens },
       { card_name: "Trade Route", dependency: Material.find_by(name: "Trade Route Mat") },
       { card_name: "Embargo", dependency: curse },
       { card_name: "Embargo", dependency: Material.find_by(name: "Embargo Tokens") },
@@ -124,9 +126,13 @@ namespace :import do
       CardDependency.create(card: card, dependency: dependency[:dependency])
     end
 
-    potion = Card.find_by(name: 'Potion')
+    potion = Card.find_by(name: "Potion")
     Card.where.not(potion_cost: 0).each do |card|
       CardDependency.create(card: card, dependency: potion)
+    end
+
+    Card.where(reserve: true).each do |card|
+      CardDependency.create(card: card, dependency: tavern_mats)
     end
   end
 end
