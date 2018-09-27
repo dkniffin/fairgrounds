@@ -1,3 +1,3 @@
 class FairgroundsSchema < GraphQL::Schema
-  query(Types::QueryType)
+  query(Types::Query)
 end

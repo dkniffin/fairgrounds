@@ -37,6 +37,7 @@ Functionality:
   Get details for specific Kingdom
   Create a kingdom
   Create a play
+TODO: Add the ability to pull an imageUrl or imagePath for materials and cards
 
 # Misc
 TODO: Fix broken card images

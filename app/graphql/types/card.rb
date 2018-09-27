@@ -1,13 +1,13 @@
 module Types
-  class CardType < GraphQL::Schema::Object
-    field :id, Integer, null: false
+  class Card < BaseType
+    description "A Dominion card (including sideways cards)"
+
     field :name, String, null: true
     field :action, Boolean, null: true
     field :attack, Boolean, null: true
     field :boon, Boolean, null: true
     field :castle, Boolean, null: true
     field :cost, Integer, null: true
-    field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :curse, Boolean, null: true
     field :doom, Boolean, null: true
     field :duration, Boolean, null: true
@@ -31,8 +31,9 @@ module Types
     field :trash, Boolean, null: true
     field :traveller, Boolean, null: true
     field :treasure, Boolean, null: true
-    field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :victory, Boolean, null: true
     field :zombie, Boolean, null: true
+
+    field :dependencies, [Types::Dependency], null: false
   end
 end

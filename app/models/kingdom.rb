@@ -20,6 +20,10 @@ class Kingdom < ApplicationRecord
     plays.average(:rating).to_i.ceil
   end
 
+  def play_count
+    plays.count
+  end
+
   private
 
   def validate_kindom_size
