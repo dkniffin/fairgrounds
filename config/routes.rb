@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :plays, only: %i(new create)
 
   get :credits, to: "application#credits"
+  get :graphql_test, to: "kingdoms#graphql_test"
 end
