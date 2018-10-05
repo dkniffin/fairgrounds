@@ -16,6 +16,7 @@ module Types
     field :gathering, Boolean, null: true
     field :heirloom, Boolean, null: true
     field :hex, Boolean, null: true
+    field :image_path, String, null: true
     field :landmark, Boolean, null: true
     field :looter, Boolean, null: true
     field :night, Boolean, null: true

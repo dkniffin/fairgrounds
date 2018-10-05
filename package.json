@@ -19,6 +19,7 @@
     "prop-types": "^15.6.1",
     "rails-erb-loader": "^5.4.2",
     "react": "^16.3.2",
+    "react-apollo": "^2.2.4",
     "react-autosuggest": "^9.3.4",
     "react-dom": "^16.3.2",
     "react-on-rails": "11.0.7",
