@@ -1,0 +1,17 @@
+.c-material {
+  & img {
+    /* Keep aspect ratio */
+    display: block;
+    width: 100%;
+    min-width: 90px;
+    height: auto;
+  }
+}
+
+.c-material--mat {
+  max-width: 200px;
+}
+
+.c-material--token {
+  max-width: 50px;
+}

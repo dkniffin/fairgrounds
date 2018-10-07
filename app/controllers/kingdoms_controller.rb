@@ -7,7 +7,7 @@ class KingdomsController < ApplicationController
 
   def new
     render :new, locals: {
-      cards: Card.supply_cards,
+      cards: Card.all,
       kingdom: Kingdom.new
     }
   end

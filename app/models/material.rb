@@ -12,4 +12,7 @@
 #
 
 class Material < ApplicationRecord
+  def image_path
+    "/material-images/#{image_name}"
+  end
 end

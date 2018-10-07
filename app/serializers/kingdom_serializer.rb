@@ -2,8 +2,7 @@ class KingdomSerializer < ApplicationSerializer
   attributes :id, :name, :rating, :play_count, :errors
 
   has_many :cards
-
-  def play_count
-    object.plays.count
-  end
+  has_many :supply_cards
+  has_many :non_supply_cards
+  has_many :materials
 end

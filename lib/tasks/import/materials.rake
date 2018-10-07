@@ -5,7 +5,7 @@ namespace :import do
         name: "Island Mats",
         token: false,
         mat: true,
-        image_name: "Island_mat.png"
+        image_name: "Island_mat.jpg"
       },
       {
         name: "Native Village Mats",
@@ -43,29 +43,30 @@ namespace :import do
         mat: true,
         image_name: "Coffers.jpg"
       },
-
-      # TODO: Get images for these
       {
         name: "Victory Tokens",
         token: true,
-        mat: false
+        mat: false,
+        image_name: "VP_tokens.jpg"
       },
       {
         name: "Coin Tokens",
         token: true,
-        mat: false
+        mat: false,
+        image_name: "Coin_tokens.jpg"
       },
       {
         name: "Embargo Tokens",
         token: true,
-        mat: false
+        mat: false,
+        image_name: "Embargo_tokens.jpg"
       },
       {
         name: "Debt Tokens",
         token: true,
-        mat: false
+        mat: false,
+        image_name: "Debt_tokens.jpg"
       },
-
       {
         name: "Trashing Tokens",
         token: true,

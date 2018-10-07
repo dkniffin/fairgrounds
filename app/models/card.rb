@@ -42,12 +42,13 @@ class Card < ApplicationRecord
   has_many :kingdom_memberships, dependent: :destroy
   has_many :kingdoms, through: :kingdom_memberships
   has_many :card_dependencies, dependent: :destroy
-  has_many :card_dependents, as: :dependency, class_name: "CardDependency", dependent: :destroy
+  has_many :card_dependents, as: :dependency, class_name: "CardDependency", dependent: :destroy, inverse_of: :dependency
   has_many :dependents, through: :card_dependents, source: :card, class_name: "Card"
 
   validates :name, uniqueness: true
 
   scope :supply_cards, -> { where(supply: true) }
+  scope :non_supply_cards, -> { where(supply: false) }
 
   def image_path
     "/card-images/#{name.tr(" ", "_")}.jpg"

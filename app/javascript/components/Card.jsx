@@ -17,7 +17,7 @@ function Card({ cardData, onClose }) {
         >
           &#215;
         </button>}
-      <img src={cardData.imagePath} />
+      <img src={cardData.imagePath} title={cardData.name} />
     </div>
   );
 }
