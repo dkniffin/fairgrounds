@@ -5,6 +5,7 @@ import {
   Show,
   TextField,
   BooleanField,
+  ImageField,
   ShowButton,
   SimpleShowLayout
 } from 'react-admin';
@@ -16,12 +17,12 @@ export function CardShow(props) {
   return (
     <Show {...props}>
       <SimpleShowLayout>
-        <TextField source="id" />
         <TextField source="name" />
-        <TextField source="special_cost" />
+        <TextField source="specialCost" />
         <TextField source="cost" />
-        <TextField source="image_path" />
-        <TextField source="potion_cost" />
+        <TextField source="potionCost" />
+
+        <ImageField source="imageUrl" title="name" />
 
         <BooleanField source="action" />
         <BooleanField source="attack" />
@@ -71,8 +72,8 @@ export function CardList(props) {
   return (
     <List {...props}>
       <Datagrid>
-        <TextField source="id" />
         <TextField source="name" />
+        <ImageField source="imageUrl" title="name" />
         <ShowButton />
       </Datagrid>
     </List>

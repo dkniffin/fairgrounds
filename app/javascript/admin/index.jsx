@@ -3,7 +3,7 @@ import { Admin, Resource } from 'react-admin';
 import buildGraphcoolProvider from 'ra-data-graphcool';
 
 import { CardIcon, CardList, CardShow } from './cards';
-import { KingdomIcon, KingdomList } from './kingdoms';
+import { KingdomIcon, KingdomList, KingdomShow } from './kingdoms';
 
 import graphQLClient from '../graphql_client';
 
@@ -28,7 +28,7 @@ class AdminApp extends Component {
     return (
       <Admin dataProvider={dataProvider}>
         <Resource name="Card" icon={CardIcon} list={CardList} show={CardShow} />
-        <Resource name="Kingdom" icon={KingdomIcon} list={KingdomList}  />
+        <Resource name="Kingdom" icon={KingdomIcon} list={KingdomList} show={KingdomShow} />
       </Admin>
     );
   }

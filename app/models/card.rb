@@ -58,6 +58,10 @@ class Card < ApplicationRecord
     "/card-images/#{name.tr(" ", "_")}.jpg"
   end
 
+  def image_url
+    Rails.application.routes.url_helpers.root_url.chop + image_path
+  end
+
   def dependencies
     card_dependencies.map(&:dependency).flatten
   end

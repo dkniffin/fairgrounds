@@ -7,6 +7,7 @@ module Types
     field :potion_cost, Integer, null: true
     field :special_cost, Boolean, null: true
     field :image_path, String, null: true
+    field :image_url, String, null: true
 
     field :action, Boolean, null: true
     field :attack, Boolean, null: true

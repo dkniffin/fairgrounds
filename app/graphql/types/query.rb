@@ -26,11 +26,11 @@ module Types
       end
 
       field single_name, type, null: false do
-        argument :id, Integer, required: true
+        argument :id, ID, required: true
         description "A single #{name}"
       end
 
-      define_method(single_name) do |id:|
+      define_method(name) do |id:|
         model.find(id)
       end
     end
