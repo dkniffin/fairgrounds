@@ -48,6 +48,10 @@ class Kingdom < ApplicationRecord
     plays.count
   end
 
+  def card_ids
+    cards.pluck(:id)
+  end
+
   private
 
   def validate_kindom_size
