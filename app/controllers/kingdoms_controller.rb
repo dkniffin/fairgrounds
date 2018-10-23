@@ -32,6 +32,10 @@ class KingdomsController < ApplicationController
     }
   end
 
+  def graphql_test
+    render :graphql_test
+  end
+
   private
 
   def kingdom_params

@@ -42,7 +42,11 @@ class Card < ApplicationRecord
   has_many :kingdom_memberships, dependent: :destroy
   has_many :kingdoms, through: :kingdom_memberships
   has_many :card_dependencies, dependent: :destroy
-  has_many :card_dependents, as: :dependency, class_name: "CardDependency", dependent: :destroy, inverse_of: :dependency
+  has_many :card_dependents,
+           as: :dependency,
+           inverse_of: :dependency,
+           class_name: "CardDependency",
+           dependent: :destroy
   has_many :dependents, through: :card_dependents, source: :card, class_name: "Card"
 
   validates :name, uniqueness: true

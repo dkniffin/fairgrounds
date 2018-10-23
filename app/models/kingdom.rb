@@ -44,6 +44,10 @@ class Kingdom < ApplicationRecord
     dependencies_by_type[Card] || []
   end
 
+  def play_count
+    plays.count
+  end
+
   private
 
   def validate_kindom_size
