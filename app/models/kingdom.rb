@@ -44,10 +44,6 @@ class Kingdom < ApplicationRecord
     dependencies_by_type[Card] || []
   end
 
-  def play_count
-    plays.count
-  end
-
   def card_ids
     cards.pluck(:id)
   end
