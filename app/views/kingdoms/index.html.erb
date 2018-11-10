@@ -2,4 +2,4 @@
 
 <%= button_to "New Kingdom", new_kingdom_path, method: :get, form_class: "c-btn--main h-inline h-float--right" %>
 
-<%= react_component("KingdomsList", props: { kingdoms: kingdoms }) %>
+<%= react_component("KingdomsList", kingdoms: kingdoms) %>

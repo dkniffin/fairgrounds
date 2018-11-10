@@ -23,9 +23,9 @@
     "react-apollo": "^2.2.4",
     "react-autosuggest": "^9.3.4",
     "react-dom": "^16.3.2",
-    "react-on-rails": "11.0.7",
     "react-star-rating-component": "^1.4.1",
-    "sanitize.css": "^5.0.0"
+    "sanitize.css": "^5.0.0",
+    "webpacker-react": "^0.3.2"
   },
   "devDependencies": {
     "eslint": "^3.12.2",

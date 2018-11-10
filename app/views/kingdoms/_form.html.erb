@@ -1,11 +1,9 @@
 <%=
   react_component("KingdomForm",
-    props: {
-      authenticityToken: form_authenticity_token,
-      cards: cards,
-      kingdom: kingdom,
-      submitEndpoint: kingdom.persisted? ? kingdom_path(kingdom) : kingdoms_path,
-      submitVerb: kingdom.persisted? ? 'put' : 'post',
-    }
+    authenticityToken: form_authenticity_token,
+    cards: cards,
+    kingdom: kingdom,
+    submitEndpoint: kingdom.persisted? ? kingdom_path(kingdom) : kingdoms_path,
+    submitVerb: kingdom.persisted? ? 'put' : 'post',
   )
 %>

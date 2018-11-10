@@ -8,7 +8,7 @@ class ReactComponentInput < SimpleForm::Inputs::Base
       initialValue: value
     }.merge(given_props || {})
 
-    template.react_component(component, props: props)
+    template.react_component(component, props)
   end
 
   private

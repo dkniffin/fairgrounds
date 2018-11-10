@@ -6137,10 +6137,6 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
-react-on-rails@11.0.7:
-  version "11.0.7"
-  resolved "https://registry.yarnpkg.com/react-on-rails/-/react-on-rails-11.0.7.tgz#6a938d4928f594f65aac1cb386b6142f44c313bf"
-
 react-redux@~5.0.7:
   version "5.0.7"
   resolved "http://registry.npmjs.org/react-redux/-/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
@@ -7807,6 +7803,10 @@ webpack@^3.11.0:
     watchpack "^1.4.0"
     webpack-sources "^1.0.1"
     yargs "^8.0.2"
+
+webpacker-react@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/webpacker-react/-/webpacker-react-0.3.2.tgz#18c417a3fd51978d0ca98b62a47454d800754e09"
 
 websocket-driver@>=0.5.1:
   version "0.7.0"
