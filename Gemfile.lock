@@ -99,9 +99,6 @@ GEM
       domain_name (~> 0.5)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
-    js-routes (1.4.4)
-      railties (>= 3.2)
-      sprockets-rails
     json (2.1.0)
     jsonapi-renderer (0.2.0)
     launchy (2.4.3)
@@ -280,7 +277,6 @@ DEPENDENCIES
   foreman
   graphiql-rails
   graphql
-  js-routes
   letter_opener
   listen (>= 3.0.5, < 3.2)
   mailgun-ruby

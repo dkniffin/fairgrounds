@@ -3195,9 +3195,9 @@ graphql-anywhere@^4.1.0-alpha.0, graphql-anywhere@^4.1.19:
   dependencies:
     apollo-utilities "^1.0.21"
 
-"graphql-ast-types@github:Kmaschta/graphql-ast-types#master":
+graphql-ast-types@Kmaschta/graphql-ast-types#master:
   version "1.0.2"
-  resolved "https://codeload.github.com/Kmaschta/graphql-ast-types/tar.gz/412a17d44c4c9e05dc93195263c96e6c96f5db85"
+  resolved "https://codeload.github.com/Kmaschta/graphql-ast-types/tar.gz/bd715ea03c2b4aeefc9a72ca7b42c80e807ec0c8"
 
 graphql-tag@^2.10.0, graphql-tag@^2.4.2, graphql-tag@^2.6.1:
   version "2.10.0"
@@ -4239,10 +4239,6 @@ lodash.camelcase@^4.3.0:
 lodash.clonedeep@^4.3.2:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
-
-lodash.defaults@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
 
 lodash.flowright@^3.5.0:
   version "3.5.0"
@@ -5996,13 +5992,6 @@ raf@^3.3.0:
   resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.0.tgz#a28876881b4bc2ca9117d4138163ddb80f781575"
   dependencies:
     performance-now "^2.1.0"
-
-rails-erb-loader@^5.4.2:
-  version "5.4.2"
-  resolved "https://registry.yarnpkg.com/rails-erb-loader/-/rails-erb-loader-5.4.2.tgz#6a8ae823d49b73e42ba9746d6ae6644212f9bf60"
-  dependencies:
-    loader-utils "^1.1.0"
-    lodash.defaults "^4.2.0"
 
 randomatic@^3.0.0:
   version "3.0.0"

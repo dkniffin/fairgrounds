@@ -5,7 +5,6 @@ import { kingdomType } from 'types';
 import Card from 'components/Card';
 import Material from 'components/Material';
 
-import Routes from 'routes';
 
 const propTypes = {
   kingdom: kingdomType,
@@ -35,7 +34,7 @@ function Kingdom({ kingdom, showHeader, onCardClose }) {
     <div className="c-kingdom">
       {showHeader &&
         <div className="c-kingdom__header">
-          <a className="c-kingdom__title" href={Routes.kingdomPath(kingdom.id)}>{titleString}</a>
+          <a className="c-kingdom__title" href={`/kingdoms/${kingdom.id}`}>{titleString}</a>
 
           <div className="c-kingdom__rating">
             <div className="c-kingdom__label">Avg Rating</div>

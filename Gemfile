@@ -11,7 +11,6 @@ gem "rails", "~> 5.1.4"
 
 gem "active_model_serializers", "~> 0.10.0"
 gem "graphql"
-gem "js-routes"
 gem "mailgun-ruby"
 # TODO: bump this to ~> 1.0.0, once this gets resolved: https://github.com/rails/rails/pull/31671
 gem "pg", "~> 0.21.0"
