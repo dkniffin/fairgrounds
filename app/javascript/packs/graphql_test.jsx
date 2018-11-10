@@ -26,7 +26,7 @@ const App = () => (
         if (error) { return <p>Error :(</p>; }
 
         // return <Kingdom kingdom={kingdom} />;
-        console.log(data);
+        console.log(data); // eslint-disable-line no-console
       }}
     </Query>
   </ApolloProvider>
