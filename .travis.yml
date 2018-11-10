@@ -7,7 +7,7 @@ before_install:
   - yarn install
 cache: yarn
 before_script:
-  - cp config/secrets.example.yml config/secrets.yml
+  - cp .env.example .env
   - psql -c 'create database fairgrounds_test;' -U postgres
   - bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare --trace
