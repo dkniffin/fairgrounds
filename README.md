@@ -30,7 +30,7 @@ set up this app:
 git clone git@github.com:dkniffin/fairgrounds.git
 cd fairgrounds
 bundle install
-cp config/secrets.example.yml config/secrets.yml
+cp .env.example .env
 bundle exec rails db:setup
 ```
 
