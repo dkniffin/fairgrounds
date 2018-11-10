@@ -1,7 +1,7 @@
 import ReactOnRails from 'react-on-rails';
 
-import components from '../components';
+import components from 'main/components';
 
-import '../styles';
+import 'main/styles';
 
 ReactOnRails.register(components);

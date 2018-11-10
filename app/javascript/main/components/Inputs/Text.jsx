@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
-import { inputType } from 'types';
+import { inputType } from 'main/types';
 
 const propTypes = {
   input: inputType,

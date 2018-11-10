@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { kingdomType } from 'types';
-import Card from 'components/Card';
-import Material from 'components/Material';
+import { kingdomType } from 'main/types';
+import Card from 'main/components/Card';
+import Material from 'main/components/Material';
 
 
 const propTypes = {

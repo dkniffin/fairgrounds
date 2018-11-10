@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import ReactStarRating from 'react-star-rating-component';
 
-import UserIcon from 'components/UserIcon';
-import StarIcon from 'components/StarIcon';
+import UserIcon from 'main/components/UserIcon';
+import StarIcon from 'main/components/StarIcon';
 
 const propTypes = {
   icon: PropTypes.string,

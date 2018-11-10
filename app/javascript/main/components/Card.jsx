@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { cardType } from 'types';
+import { cardType } from 'main/types';
 
 const propTypes = {
   cardData: cardType,

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Kingdom from 'components/Kingdom';
-import { Text, CardPicker } from 'components/Inputs';
+import Kingdom from 'main/components/Kingdom';
+import { Text, CardPicker } from 'main/components/Inputs';
 
-import { cardType, kingdomType } from 'types';
+import { cardType, kingdomType } from 'main/types';
 
 const propTypes = {
   authenticityToken: PropTypes.string.isRequired,

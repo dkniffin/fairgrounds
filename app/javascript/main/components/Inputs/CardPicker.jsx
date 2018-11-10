@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 import Autosuggest from 'react-autosuggest';
-import Card from 'components/Card';
-import { cardType } from 'types';
+import Card from 'main/components/Card';
+import { cardType } from 'main/types';
 
 const propTypes = {
   cards: PropTypes.arrayOf(cardType),

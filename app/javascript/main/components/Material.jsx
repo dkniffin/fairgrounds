@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { materialType } from 'types';
+import { materialType } from 'main/types';
 
 const propTypes = {
   materialData: materialType,

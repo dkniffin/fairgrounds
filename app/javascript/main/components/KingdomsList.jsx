@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { kingdomType } from 'types';
-import Kingdom from 'components/Kingdom';
+import { kingdomType } from 'main/types';
+import Kingdom from 'main/components/Kingdom';
 
 const propTypes = {
   kingdoms: PropTypes.arrayOf(kingdomType)

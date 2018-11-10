@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import gql from 'graphql-tag';
 import { ApolloProvider, Query } from 'react-apollo';
 
-// import Kingdom from 'components/Kingdom';
+// import Kingdom from 'main/components/Kingdom';
 
 import graphQLClient from '../graphql_client';
 
