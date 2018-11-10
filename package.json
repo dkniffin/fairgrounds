@@ -4,7 +4,8 @@
   "scripts": {
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint 'app/**/*.css'",
-    "lint:js": "eslint --format 'node_modules/eslint-friendly-formatter' --ext .js,.jsx ./app"
+    "lint:js": "eslint --format 'node_modules/eslint-friendly-formatter' --ext .js,.jsx ./app",
+    "postinstall": "cd client && npm install"
   },
   "dependencies": {
     "@rails/webpacker": "3.5",
