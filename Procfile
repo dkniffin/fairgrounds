@@ -1,3 +1,2 @@
-backend: bundle exec rails server -p 3000
-frontend: bin/webpack-dev-server
+web: bundle exec puma -p $PORT
 release: rails db:migrate
